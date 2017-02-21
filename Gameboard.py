@@ -16,9 +16,19 @@ import cmd
 import sys
 import json
 import GameUtilities
+from compiler.pyassem import DONE
 Location = GameUtilities.Location
 NotePage = GameUtilities.NotePage
 DieRoll = GameUtilities.VariableDie
+
+'''
+We might not need this custom encoder, but we'll put it here
+in case we want to modify it to deal with unusual conditions
+'''
+class MyEncoder(json.JSONEncoder):
+    def default(self, o):
+        return o.__dict__
+
 
 import CoreClasses 
 Ship = CoreClasses.Ship
@@ -239,10 +249,10 @@ Energy (capacity/production): %d / %d
 Goods (capacity / production): %d / %d
 Colony Present: %s
 ====================================''' % (self.location.xCoord, self.location.yCoord, 
-                                           self.farmingCapacity, self.farmingDeveloped,
-                                           self.energyCapacity, self.energyDeveloped, 
-                                           self.manufacturingCapacity, self.manufacturingDeveloped,
-                                           self.hasColony)
+                                          self.farmingCapacity, self.farmingDeveloped,
+                                          self.energyCapacity, self.energyDeveloped, 
+                                          self.manufacturingCapacity, self.manufacturingDeveloped,
+                                          self.hasColony)
       print dumpstring
    
    def addShip(self,s):
@@ -322,9 +332,9 @@ Total Goods Production:  %d
          i.dump()
 
 class GameShell(cmd.Cmd):
-   '''we'll presume a global gameboard structure called g 
+   '''we'll presume a global Gameboard structure called g 
    this whole class is a giant hack
-   it's purpose is simply to provide a testbed for game
+   its purpose is simply to provide a test bed for game
    functions
    '''
    
@@ -431,13 +441,42 @@ Active Ship: %s''' % (self.activePlayer.playerName, self.activeSector.location.t
       return True
    
    def postloop(self):
-      print 'Thanks for playing!'
+      print 'Thanks for playing!\n'
       
    ############### test routines ##########################   
+   def do_makePage(self,line):
+      done = False
+      tempPage = NotePage('')
+      print '''
+This is simply a test to validate the structure and methods of the
+NotePage class. It uses a temporary NotePage that will be destroyed
+after the test succeeds.
+
+Type lines of input
+End by using a line the only "..."
+
+      '''
+      while (done != True):
+         #something
+         nextLine = GameUtilities.get_tty_input('line: ')
+         if (nextLine == '...'):
+            done = True
+         else:
+            # add it to the page
+            tempPage.setContent(tempPage.getContent() + '\n' + nextLine)
+      print 'Here is your page\n\n'
+      tempPage.dumpContent()
+            
+         
+   
    def do_showRegistry(self,line):
       self.g.registry.dump()
    def do_sectorsjson(self,line):
-      print 'developer will finish this later'
+      gm = self.g
+      sect = gm.sectorTable[0][0] # TODO - okay, let's make this more generalized now...
+      print json.dumps(sect,cls=MyEncoder)
+      
+      
    def help_name(self):
       print 'test name generator'
    def do_name(self,line):

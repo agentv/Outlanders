@@ -30,7 +30,7 @@ A player’s team can focus on expansion, industry, trade or militarization.
 
 The primary components in the design of the game are Pods, Ships, Colonies, and Players.
 
-There is a Gameboard component that encapsulates most of the adminstrative functions of the game. 
+There is a Gameboard component that encapsulates most of the administrative functions of the game. 
 For instance, the logic for processing "end-of-turn" calculations is a part of the Gameboard.
 The timers are part of the Gameboard as are the random result artifacts (ie. dice)
 Sectors are the cells of the Gameboard and they contain information about activities within their

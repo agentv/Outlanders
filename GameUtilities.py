@@ -3,7 +3,8 @@ import random
 ''' game utility section begins '''
       
 def get_tty_input(prompt):
-   return raw_input(prompt)
+   print prompt
+   return raw_input(" ")
 
 class VariableDie ():
    ''' Variable Die
@@ -70,6 +71,8 @@ class NotePage():
       self.contentString = msg
    def setContent(self,msg):
       self.contentString = msg
+   def getContent(self):
+      return self.contentString
    def dumpContent(self):
       print self.contentString
 
@@ -80,6 +83,9 @@ class NoteBook():
       self.pageList.append(c)
    def addPage(self,note=NotePage()):
       self.pageList.append(note)
+   def getNotebook(self):
+      # there is always at least one page, so it's okay to do this
+      return self.pageList
    def dumpNotebook(self):
       for p in self.pageList:
          p.dumpContent()

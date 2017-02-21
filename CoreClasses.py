@@ -3,6 +3,39 @@ import GameUtilities
 Location = GameUtilities.Location
 NotePage = GameUtilities.NotePage
 
+class ToDo(object):
+   def __init__(self):
+      self.x = 1
+      """
+      * back out use of Location class from Organization
+      and replace it with self.xc and self.yc -- less critical
+      now that the json dump is fixed
+      
+      * rig all core classes to be JSON serializable. that probably
+      just means adding an identifier field and noticing it when
+      the object is marshalled for deserialization -- the 
+      JSONDumpExample program will provide a model
+      
+      * leave markers for when we'll add self.zc to the
+      class definitions. When we do that, we'll be moving
+      into the 3D space. The proper place for this.
+      
+      * add a timer - it provides a game time-reference
+      it gives the player an Ajax element that does the
+      countdown, but overall it's a function of the game
+      server and governs the end-of-turn processing
+      
+      * plan to add mechanism for alliances - they should be
+      more dynamic than in the classic game model. There can
+      be an idea of a static alliance where members sign up and
+      leave from a roster Also the idea of dynamic alliances
+      that spring up ad-hoc and can dissolve rapidly, and the
+      idea of alliances-of-alliances 
+      
+   
+      """
+
+
 class Pod:
    ''' defines the base characteristics of the core game unit, the pod'''
    energyConsumed = 0
@@ -18,7 +51,7 @@ class Pod:
    damaged = False
 
 class ColonyPod(Pod):
-   
+   '''basic Colonoy Pod -- comes from converted ship'''
    def __init__(self):
       self.energyConsumed = 1
       self.foodConsumed = 1
@@ -237,7 +270,7 @@ Goods Stored:         %d
       
    def assembleColony(self):
       ''' create and assign the pods necessary for a basic colony '''
-      ''' I acknowledge that this is a blight and should be fixed in refactoring '''
+      ''' I acknowledge that this is a blight and should be fixed during refactoring '''
       # give them 30 energy pods
       for r in range(0,30):
          self.attachPod(EnergyPod())
