@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+endopoint.convert_inbound_to_outbound=PROMPT
+server_already_running_inform=PROMPT
+tooling_ui_preference_current_ui_plugin_version=6.2.4.201704271520

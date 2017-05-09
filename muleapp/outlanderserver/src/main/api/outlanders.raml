@@ -1,0 +1,87 @@
+#%RAML 0.8
+baseUri: https://mocksvc.mulesoft.com/mocks/73cf393e-cfc9-4124-931a-c113e3a40268
+title: Outlanders
+version: 1.0
+
+/ship:
+  get:
+    description: Get all known ships
+  post:
+    description: add a new (or updated) ship to the pool
+    
+  /{ID}:
+    get:
+      description: get ship designated by ID
+    patch:
+      description: update ship with designated ID using mission (must be supplied) 
+      queryParameters: 
+        mission:
+          enum: [build,move,recon,convert,attack]
+  
+  /{PLAYER}:
+    get:
+      description: get all ships assigned to designated player
+    
+  /{ZONE}:
+    get:
+      description: get all ships in designated ZONE
+      
+/colony:
+  get:
+    description: get all known colonies
+  post:
+    description: add a new (or updated) colony
+    
+  /{ID}:
+    get:
+      description: get ship designated by ID
+    patch:
+      description: update colony designated by ID
+      queryParameters: 
+        mission:
+          enum: [buildship,buildcolony,defend]
+
+  /{PLAYER}:
+    get:
+      description: get all colonies assigned to designated PLAYER
+
+  /{ZONE}:
+    get:
+      description: get all colonies in designated ZONE
+      
+/sector:
+  get:
+    description: get all known sectors
+  post:
+    description: add a new (or updated) sector
+      
+  /{ZONE}:
+    get:
+      description: get all sectors in designated ZONE
+  
+  /{COORD}:
+    get:
+      description: get sector identified by COORD
+      
+  /{PLAYER}:
+    get:
+      description: get all sectors known to designated PLAYER
+      
+/time:
+  get:
+    description: get current game time
+    
+/message:
+  /{PLAYER}:
+    get:
+      description: get all messages assigned to designated PLAYER
+  /{ID}:
+    get:
+      description: get message designated by ID
+    put:
+      description: replace message designed by ID
+  /{BINDER}:
+    get:
+      description: get all messages assigned to designated BINDER
+      
+  

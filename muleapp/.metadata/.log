@@ -1,0 +1,25 @@
+!SESSION 2017-05-09 10:48:57.101 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/vincentlowe/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/vincentlowe/.eclipse_keyring -showlocation
+
+!ENTRY org.mule.tooling.core 1 0 2017-05-09 10:50:18.564
+!MESSAGE Configuring M2_REPO variable with value: /Users/vincentlowe/.m2/repository
+
+!ENTRY org.mule.tooling.core 1 0 2017-05-09 10:50:18.621
+!MESSAGE Configuring M2_REPO variable with value: /Users/vincentlowe/.m2/repository
+
+!ENTRY org.eclipse.core.net 1 0 2017-05-09 10:50:33.513
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2017-05-09 10:50:33.536
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.mule.tooling.core 1 0 2017-05-09 10:50:47.369
+!MESSAGE Generating unique Studio Id = STUDIO-d4eaf49e-48d9-45c7-b206-46b598198ce0-14943522473680867
+
+!ENTRY org.mule.tooling.core 1 0 2017-05-09 10:50:47.396
+!MESSAGE Generating unique Studio Id = STUDIO-d4eaf49e-48d9-45c7-b206-46b598198ce0-14943522473680867

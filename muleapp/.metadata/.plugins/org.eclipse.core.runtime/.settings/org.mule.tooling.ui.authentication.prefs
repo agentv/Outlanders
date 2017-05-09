@@ -1,0 +1,4 @@
+authenticated.users=[{"token"\:"1e515958-fe6a-4193-bfe9-5ed6a55dc6f8","userId"\:"vl-instructapr","refreshToken"\:"","baseUrl"\:"https\://anypoint.mulesoft.com/"}]
+current.token=1e515958-fe6a-4193-bfe9-5ed6a55dc6f8
+current.user=vl-instructapr
+eclipse.preferences.version=1

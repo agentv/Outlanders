@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+outlanderserver/api_version={"apiId"\:"15330893","apiName"\:"Outlanders","versionName"\:"1.0","versionId"\:"191832","deprecated"\:false,"organizationId"\:"3a549c89-876e-465b-aa6d-4deb762fff38","exportUrl"\:"https\://anypoint.mulesoft.com//apiplatform/repository/v2/organizations/3a549c89-876e-465b-aa6d-4deb762fff38/apis/15330893/versions/191832/files/export","rootFileId"\:"1571694"}
+outlanderserver/users=[{"token"\:"1e515958-fe6a-4193-bfe9-5ed6a55dc6f8","userId"\:"vl-instructapr","refreshToken"\:"","baseUrl"\:"https\://anypoint.mulesoft.com/"}]
