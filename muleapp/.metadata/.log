@@ -1,25 +1,98 @@
-!SESSION 2017-05-09 10:48:57.101 -----------------------------------------------
+!SESSION 2018-01-11 20:03:25.258 -----------------------------------------------
 eclipse.buildId=unknown
 java.version=1.8.0_45
 java.vendor=Oracle Corporation
 BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
 Framework arguments:  -keyring /Users/vincentlowe/.eclipse_keyring -showlocation
-Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/vincentlowe/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -data /Users/vincentlowe/GitHub/Outlander/muleapp -keyring /Users/vincentlowe/.eclipse_keyring -showlocation
 
-!ENTRY org.mule.tooling.core 1 0 2017-05-09 10:50:18.564
+!ENTRY org.mule.tooling.core 1 0 2018-01-11 20:03:29.898
 !MESSAGE Configuring M2_REPO variable with value: /Users/vincentlowe/.m2/repository
 
-!ENTRY org.mule.tooling.core 1 0 2017-05-09 10:50:18.621
+!ENTRY org.mule.tooling.core 1 0 2018-01-11 20:03:29.901
 !MESSAGE Configuring M2_REPO variable with value: /Users/vincentlowe/.m2/repository
 
-!ENTRY org.eclipse.core.net 1 0 2017-05-09 10:50:33.513
+!ENTRY org.eclipse.core.net 1 0 2018-01-11 20:03:33.650
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
 
-!ENTRY org.eclipse.core.net 1 0 2017-05-09 10:50:33.536
+!ENTRY org.eclipse.core.net 1 0 2018-01-11 20:03:33.651
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
 
-!ENTRY org.mule.tooling.core 1 0 2017-05-09 10:50:47.369
-!MESSAGE Generating unique Studio Id = STUDIO-d4eaf49e-48d9-45c7-b206-46b598198ce0-14943522473680867
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2018-01-11 20:03:36.803
+!MESSAGE Unable to read repository at jar:https://exchange2-asset-manager-kprod.s3.amazonaws.com/68ef9520-24e9-4cf2-b2f5-620025690913/af78a11c-f9d8-4ed5-b0e2-156bae74ac8a/mule-module-slack-connector-3.0.0-studio-plugin.zip?AWSAccessKeyId=AKIAJTBQMSKYL2HXJA4A&Expires=1507306018&Signature=gfQ49AZcrITbJu9Nr0vSeMORLc8=&response-content-disposition=attachment;%20filename=mule-module-slack-connector-3.0.0-studio-plugin.zip!/content.xml.
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 403 for URL: https://exchange2-asset-manager-kprod.s3.amazonaws.com/68ef9520-24e9-4cf2-b2f5-620025690913/af78a11c-f9d8-4ed5-b0e2-156bae74ac8a/mule-module-slack-connector-3.0.0-studio-plugin.zip?AWSAccessKeyId=AKIAJTBQMSKYL2HXJA4A&Expires=1507306018&Signature=gfQ49AZcrITbJu9Nr0vSeMORLc8=&response-content-disposition=attachment;%20filename=mule-module-slack-connector-3.0.0-studio-plugin.zip
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1839)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at sun.net.www.protocol.jar.URLJarFile.retrieve(URLJarFile.java:214)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:71)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+	at sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:150)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:115)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 
-!ENTRY org.mule.tooling.core 1 0 2017-05-09 10:50:47.396
-!MESSAGE Generating unique Studio Id = STUDIO-d4eaf49e-48d9-45c7-b206-46b598198ce0-14943522473680867
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2018-01-11 20:03:36.805
+!MESSAGE Unable to read repository at jar:https://exchange2-asset-manager-kprod.s3.amazonaws.com/68ef9520-24e9-4cf2-b2f5-620025690913/af78a11c-f9d8-4ed5-b0e2-156bae74ac8a/mule-module-slack-connector-3.0.0-studio-plugin.zip?AWSAccessKeyId=AKIAJTBQMSKYL2HXJA4A&Expires=1507306018&Signature=gfQ49AZcrITbJu9Nr0vSeMORLc8=&response-content-disposition=attachment;%20filename=mule-module-slack-connector-3.0.0-studio-plugin.zip!/content.xml.
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 403 for URL: https://exchange2-asset-manager-kprod.s3.amazonaws.com/68ef9520-24e9-4cf2-b2f5-620025690913/af78a11c-f9d8-4ed5-b0e2-156bae74ac8a/mule-module-slack-connector-3.0.0-studio-plugin.zip?AWSAccessKeyId=AKIAJTBQMSKYL2HXJA4A&Expires=1507306018&Signature=gfQ49AZcrITbJu9Nr0vSeMORLc8=&response-content-disposition=attachment;%20filename=mule-module-slack-connector-3.0.0-studio-plugin.zip
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1839)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at sun.net.www.protocol.jar.URLJarFile.retrieve(URLJarFile.java:214)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:71)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+	at sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:150)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:115)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2018-01-11 20:03:39.757
+!MESSAGE Unable to read repository at jar:https://exchange2-asset-manager-kprod.s3.amazonaws.com/68ef9520-24e9-4cf2-b2f5-620025690913/96ff4178-642f-478c-a955-9b31c02a42fe/mule-module-box-3.1.2-studio-plugin.zip?AWSAccessKeyId=AKIAJTBQMSKYL2HXJA4A&Expires=1513357148&Signature=iiYKmgckT/owTfhVwxmJqGzAUEw=&response-content-disposition=attachment;%20filename=mule-module-box-3.1.2-studio-plugin.zip!/content.xml.
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 403 for URL: https://exchange2-asset-manager-kprod.s3.amazonaws.com/68ef9520-24e9-4cf2-b2f5-620025690913/96ff4178-642f-478c-a955-9b31c02a42fe/mule-module-box-3.1.2-studio-plugin.zip?AWSAccessKeyId=AKIAJTBQMSKYL2HXJA4A&Expires=1513357148&Signature=iiYKmgckT/owTfhVwxmJqGzAUEw=&response-content-disposition=attachment;%20filename=mule-module-box-3.1.2-studio-plugin.zip
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1839)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at sun.net.www.protocol.jar.URLJarFile.retrieve(URLJarFile.java:214)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:71)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+	at sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:150)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:115)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2018-01-11 20:03:39.758
+!MESSAGE Unable to read repository at jar:https://exchange2-asset-manager-kprod.s3.amazonaws.com/68ef9520-24e9-4cf2-b2f5-620025690913/96ff4178-642f-478c-a955-9b31c02a42fe/mule-module-box-3.1.2-studio-plugin.zip?AWSAccessKeyId=AKIAJTBQMSKYL2HXJA4A&Expires=1513357148&Signature=iiYKmgckT/owTfhVwxmJqGzAUEw=&response-content-disposition=attachment;%20filename=mule-module-box-3.1.2-studio-plugin.zip!/content.xml.
+!STACK 0
+java.io.IOException: Server returned HTTP response code: 403 for URL: https://exchange2-asset-manager-kprod.s3.amazonaws.com/68ef9520-24e9-4cf2-b2f5-620025690913/96ff4178-642f-478c-a955-9b31c02a42fe/mule-module-box-3.1.2-studio-plugin.zip?AWSAccessKeyId=AKIAJTBQMSKYL2HXJA4A&Expires=1513357148&Signature=iiYKmgckT/owTfhVwxmJqGzAUEw=&response-content-disposition=attachment;%20filename=mule-module-box-3.1.2-studio-plugin.zip
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1839)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1440)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:254)
+	at sun.net.www.protocol.jar.URLJarFile.retrieve(URLJarFile.java:214)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:71)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+	at sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:150)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:115)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.mule.tooling.core 1 0 2018-01-11 20:03:40.651
+!MESSAGE Generating unique Studio Id = STUDIO-6fea0ba4-4632-4e63-9941-d908733214cb-15157298206510471
+
+!ENTRY org.mule.tooling.core 1 0 2018-01-11 20:03:40.652
+!MESSAGE Generating unique Studio Id = STUDIO-6fea0ba4-4632-4e63-9941-d908733214cb-15157298206510471
+
+!ENTRY org.eclipse.core.resources 4 374 2018-01-11 20:04:16.261
+!MESSAGE Resource '/.org.eclipse.jdt.core.external.folders' already exists.
+
+!ENTRY org.eclipse.core.resources 4 374 2018-01-11 20:04:16.262
+!MESSAGE Resource '/.org.eclipse.jdt.core.external.folders' already exists.
+
+!ENTRY org.eclipse.core.resources 4 374 2018-01-11 20:04:16.272
+!MESSAGE Resource '/.org.eclipse.jdt.core.external.folders' already exists.
