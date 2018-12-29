@@ -9,7 +9,10 @@ class ToDo(object):
       """
       * back out use of Location class from Organization
       and replace it with self.xc and self.yc -- less critical
-      now that the json dump is fixed
+      now that the json dump is fixed -- in fact, although the use
+      of Location is awkward in some places, the transformation of
+      the class into a 3-dimensional cartesian coord will allow the
+      game to grow organically.
       
       * rig all core classes to be JSON serializable. that probably
       just means adding an identifier field and noticing it when
