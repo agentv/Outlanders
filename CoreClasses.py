@@ -273,7 +273,10 @@ Goods Stored:         %d
       
    def assembleColony(self):
       ''' create and assign the pods necessary for a basic colony '''
-      ''' I acknowledge that this is a blight and should be fixed during refactoring '''
+      ''' I acknowledge that this is a blight and should be fixed during refactoring 
+          I currently think that the right thing here is a model data set (in JSON) that
+          enumerates the common static sizes of ships and colonies.
+      '''
       # give them 30 energy pods
       for r in range(0,30):
          self.attachPod(EnergyPod())
