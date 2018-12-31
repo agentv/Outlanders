@@ -107,11 +107,12 @@ class MasterRegistry:
       
    def dump(self):
       dumpstring = 'Master Registry:\n===============\n'
-      rstring = '\n'.join(self.register.keys())
-      print '%s%s' % (dumpstring,rstring)
-   
-          
-   
+      rstring = ''
+      for o in self.register.keys():
+          rstring += '%s -> %s\n' % (o,self.register[o])
+      # rstring = '\n'.join(self.register.keys())
+      print '%s%s' % (dumpstring,rstring)             
+
 class GameBoard:
    ''' defines the characteristic of the full game board'''
    
@@ -362,6 +363,15 @@ class GameShell(cmd.Cmd):
       else:
          print 'that did not work'
       
+   def help_dumpplayers(self):
+       print 'show details for all players'
+   def do_dumpplayers(self,line):
+       print 'Details for all Players: '
+       ndx = 1
+       for plyr in self.g.playerTable:
+           print plyr.playerName
+           plyr.dump()
+    
    
    def help_showplayers(self):
       print 'display a list of all players'
@@ -453,7 +463,7 @@ NotePage class. It uses a temporary NotePage that will be destroyed
 after the test succeeds.
 
 Type lines of input
-End by using a line the only "..."
+End by using a line with only "..."
 
       '''
       while (done != True):

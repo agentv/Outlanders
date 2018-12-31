@@ -55,7 +55,7 @@ class VariableDie ():
 
 class NameMaker():
    def grantName(self):
-      # get an alpha identifier
+      # get an alpha identifier - TODO this needs to be much better - use a time stamp at least
       alphaSet = 'abcdefghijklm'
       ltr = VariableDie(len(alphaSet)-1).roll()
       id1 = alphaSet[ltr]
