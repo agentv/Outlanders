@@ -99,7 +99,13 @@ class Location():
       self.yCoord = y
       
    def toString(self):
-      return '(%d, %d)' % (self.xCoord,self.yCoord)
+    return '(%d, %d)' % (self.xCoord,self.yCoord)
+    '''
+          staged for our move to 3D space
+          public double distanceTo(Point3d p) {
+            return Math.sqrt(Math.pow(x - p.getxCoord(), 2) + Math.pow(y - p.getyCoord(), 2) + 
+                Math.pow(z - p.getzCoord(), 2));
+    '''
    
    
 

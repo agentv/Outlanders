@@ -245,14 +245,14 @@ class Sector:
    def dump(self):
       dumpstring = '''====================================
 Sector at: %2d, %2d
-Food (capacity/production): %d / %d
-Energy (capacity/production): %d / %d
-Goods (capacity / production): %d / %d
+Food (production/capacity): %d / %d
+Energy (production/capacity): %d / %d
+Goods (production/capacity): %d / %d
 Colony Present: %s
 ====================================''' % (self.location.xCoord, self.location.yCoord, 
-                                          self.farmingCapacity, self.farmingDeveloped,
-                                          self.energyCapacity, self.energyDeveloped, 
-                                          self.manufacturingCapacity, self.manufacturingDeveloped,
+                                          self.farmingDeveloped, self.farmingCapacity, 
+                                          self.energyDeveloped, self.energyCapacity, 
+                                          self.manufacturingDeveloped, self.manufacturingCapacity, 
                                           self.hasColony)
       print dumpstring
    
