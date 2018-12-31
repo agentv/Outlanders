@@ -1,4 +1,5 @@
 import random
+import math
 
 ''' game utility section begins '''
       
@@ -89,7 +90,32 @@ class NoteBook():
    def dumpNotebook(self):
       for p in self.pageList:
          p.dumpContent()
-         
+
+class Location3D():
+    ''' contains a 3- dimensional cartesian coord '''
+    xCoord = 0
+    yCoord = 0
+    zCoord = 0
+    
+    def __init__(self,x,y,z):
+        self.xCoord = x
+        self.yCoord = y 
+        self.zCoord = z 
+        
+    def distanceTo(self,p):
+        '''
+          staged for our move to 3D space
+          public double distanceTo(Point3d p) {
+            return Math.sqrt(Math.pow(x - p.getxCoord(), 2) + Math.pow(y - p.getyCoord(), 2) + 
+                Math.pow(z - p.getzCoord(), 2));
+        '''                
+        deltaX = xCoord - p.xCoord
+        deltaY = yCoord - p.yCoord
+        deltaZ = zCoord - p.zCoord
+        return math.sqrt(deltaX**2 + deltaY**2 + deltaZ**2)
+
+
+
 class Location():
    ''' contains one 2-dimensional cartesian coord '''
    xCoord = 0
@@ -100,12 +126,6 @@ class Location():
       
    def toString(self):
     return '(%d, %d)' % (self.xCoord,self.yCoord)
-    '''
-          staged for our move to 3D space
-          public double distanceTo(Point3d p) {
-            return Math.sqrt(Math.pow(x - p.getxCoord(), 2) + Math.pow(y - p.getyCoord(), 2) + 
-                Math.pow(z - p.getzCoord(), 2));
-    '''
    
    
 

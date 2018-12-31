@@ -17,22 +17,15 @@ import sys
 import json
 import GameUtilities
 from compiler.pyassem import DONE
-Location = GameUtilities.Location
-NotePage = GameUtilities.NotePage
-DieRoll = GameUtilities.VariableDie
-
-'''
-We might not need this custom encoder, but we'll put it here
-in case we want to modify it to deal with unusual conditions
-'''
-class MyEncoder(json.JSONEncoder):
-    def default(self, o):
-        return o.__dict__
-
 
 import CoreClasses 
 Ship = CoreClasses.Ship
 Colony = CoreClasses.Colony
+
+Location = GameUtilities.Location
+NotePage = GameUtilities.NotePage
+DieRoll = GameUtilities.VariableDie
+
 
 # TODO - now that command-line processing is in place, use that to control
 # testing as development proceeds
@@ -65,6 +58,15 @@ stockSetup = {
                    'rssNames': ('Botany Bay', 'Kennedy', 'Eisenhower')
                }
              }
+
+'''
+We might not need this custom encoder, but we'll put it here
+in case we want to modify it to deal with unusual conditions
+'''
+class MyEncoder(json.JSONEncoder):
+    def default(self, o):
+        return o.__dict__
+
 
 class MasterRegistry:
    ''' 
@@ -475,9 +477,7 @@ End by using a line with only "..."
             # add it to the page
             tempPage.setContent(tempPage.getContent() + '\n' + nextLine)
       print 'Here is your page\n\n'
-      tempPage.dumpContent()
-            
-         
+      tempPage.dumpContent()        
    
    def do_showRegistry(self,line):
       self.g.registry.dump()
@@ -509,18 +509,3 @@ End by using a line with only "..."
       r.addPlayer(Player('Joan Watson'))
       r.dump()
 
-# main for this module
-
-def main():
-   # check for args   
-   if (len(sys.argv) > 1):
-      print 'found some args'
-   else:
-      print 'found no args'
-      
-   GameShell().cmdloop()
-   
-if __name__ == '__main__':
-   main()
-   
-   
