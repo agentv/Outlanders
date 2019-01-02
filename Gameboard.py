@@ -17,8 +17,8 @@ import sys
 import json
 import GameUtilities
 from compiler.pyassem import DONE
-
 import CoreClasses 
+
 Ship = CoreClasses.Ship
 Colony = CoreClasses.Colony
 
@@ -32,32 +32,35 @@ DieRoll = GameUtilities.VariableDie
 
 # Overall game elements, game board, players, and game squares (ie. sectors)
 
+
+# TODO - convert this static dictionary into a routine that reads from a JSON file
 '''
 This stock setup table sets the Gameboard to a known configuration
 as a fixed way to start the game. In the long run, the plan should
 be to read this material in from a JSON dataset and to have a way
 for players to affect the startup somewhat before the game start
 This data structure is referenced in the game setup routine
-startPositions() and in main()
+startPositions()
 '''
+
 stockSetup = {
-              'Alexander': {
-                   'loc': Location(545,250),
-                   'rssNames': ('Tesla 3', 'Captain Cook', 'Adm. Byrd') 
-               },
-              'Greg': { 
-                   'loc': Location(245,550),
-                   'rssNames': ('Portsmouth', 'Lindbergh', 'Cousteau')
-               },
-              'Roosevelt': {
-                   'loc': Location(525,310),
-                   'rssNames': ('Sanders', 'Babbage', 'Nelson')
-               },                            
-              'Napolean': {
-                   'loc': Location(340,505),
-                   'rssNames': ('Botany Bay', 'Kennedy', 'Eisenhower')
-               }
-             }
+  'Alexander': {
+       'loc': Location(545, 250),
+       'rssNames': ('Tesla 3', 'Captain Cook', 'Adm. Byrd') 
+   },
+  'Greg': { 
+       'loc': Location(245, 550),
+       'rssNames': ('Portsmouth', 'Lindbergh', 'Cousteau')
+   },
+  'Roosevelt': {
+       'loc': Location(525, 310),
+       'rssNames': ('Sanders', 'Babbage', 'Nelson')
+   },
+  'Napolean': {
+       'loc': Location(340, 505),
+       'rssNames': ('Botany Bay', 'Kennedy', 'Eisenhower')
+   }
+}
 
 '''
 We might not need this custom encoder, but we'll put it here
@@ -66,7 +69,6 @@ in case we want to modify it to deal with unusual conditions
 class MyEncoder(json.JSONEncoder):
     def default(self, o):
         return o.__dict__
-
 
 class MasterRegistry:
    ''' 
@@ -117,7 +119,17 @@ class MasterRegistry:
 
 class GameBoard:
    ''' defines the characteristic of the full game board'''
-   
+
+   def __init__(self):
+      self.sectorTable = {} # we use a dictionary to create a sparse matrix
+      self.sectorTable[0] = {}
+      self.addSector(Sector(Location(0,0)))
+      
+      self.playerTable = []
+      
+      self.registry = MasterRegistry()
+      self.startPositions()
+  
    def scanNeighbors(self,sect):
       xc = sect.location.xCoord
       yc = sect.location.yCoord
@@ -164,18 +176,18 @@ class GameBoard:
              that with a "turn 0" that allows them to roll up a bunch 
              of surplus resources into whatever they wish
          '''
-         
-         co = Colony(plyr,stockSetup[p]['rssNames'][0],spot)
+
+         co = Colony(plyr, stockSetup[p]['rssNames'][0], spot)
          plyr.addColony(co)
          self.registry.addColony(co)
          sect.hasColony = True
          
-         sh = Ship(plyr,stockSetup[p]['rssNames'][1],spot)
+         sh = Ship(plyr, stockSetup[p]['rssNames'][1], spot)
          plyr.addShip(sh)
          self.registry.addShip(sh)
          sect.addShip(sh)
          
-         sh = Ship(plyr,stockSetup[p]['rssNames'][2],spot)
+         sh = Ship(plyr, stockSetup[p]['rssNames'][2], spot)
          plyr.addShip(sh)
          self.registry.addShip(sh)
          sect.addShip(sh)
@@ -205,15 +217,6 @@ class GameBoard:
          return s
       return self.sectorTable[ndx][ndy]
 
-   def __init__(self):
-      self.sectorTable = {} # we use a dictionary to create a sparse matrix
-      self.sectorTable[0] = {}
-      self.addSector(Sector(Location(0,0)))
-      
-      self.playerTable = []
-      
-      self.registry = MasterRegistry()
-      self.startPositions()
    
    def dump(self):
       for r in self.sectorTable.keys():
@@ -222,6 +225,7 @@ class GameBoard:
             
    def getSector(self,loc=Location(0,0)): # this throws a key error if table not populated
       return (self.sectorTable[loc.xCoord][loc.yCoord])         
+
 
 class Sector:
    ''' core characteristics of any Sector '''
@@ -234,9 +238,9 @@ class Sector:
    farmingDeveloped = 0
    energyDeveloped = 0
    
-   portAuthority = [] # list of ships in sector
+   portAuthority = []  # list of ships in sector
    
-   hasColony = False # flag used now to prevent multiple colonies in one sector
+   hasColony = False  # flag used now to prevent multiple colonies in one sector
    
    ''' add/remove quotes at end of line to enable or disable 
    colonyCommission = [] # list of colonies in sector - future development
@@ -251,25 +255,25 @@ Food (production/capacity): %d / %d
 Energy (production/capacity): %d / %d
 Goods (production/capacity): %d / %d
 Colony Present: %s
-====================================''' % (self.location.xCoord, self.location.yCoord, 
-                                          self.farmingDeveloped, self.farmingCapacity, 
-                                          self.energyDeveloped, self.energyCapacity, 
-                                          self.manufacturingDeveloped, self.manufacturingCapacity, 
+====================================''' % (self.location.xCoord, self.location.yCoord,
+                                          self.farmingDeveloped, self.farmingCapacity,
+                                          self.energyDeveloped, self.energyCapacity,
+                                          self.manufacturingDeveloped, self.manufacturingCapacity,
                                           self.hasColony)
       print dumpstring
    
-   def addShip(self,s):
+   def addShip(self, s):
       self.portAuthority.append(s)
       
-   def removeShip(self,s):
+   def removeShip(self, s):
       self.portAuthority.remove(s)
       
-   def __init__(self,l=Location(0,0)):
+   def __init__(self, l=Location(0, 0)):
       self.location = l
       xc = l.xCoord
       yc = l.yCoord
       
-      boost = 0 # added to resource calc when we know where
+      boost = 0  # added to resource calc when we know where
       if xc < 400 or yc < 400: 
          boost += 40
       if xc < 200 or yc < 200:
@@ -279,11 +283,12 @@ Colony Present: %s
       self.farmingCapacity = 50 + DieRoll(30).roll() + boost
       self.energyCapacity = 70 + DieRoll(20).roll() + boost
                
-   def distanceTo (self,loc=Location(0,0)):
-      xDelta = abs(self.location.xCoord-loc.xCoord)
-      yDelta = abs(self.location.yCoord-loc.yCoord)
+   def distanceTo (self, loc=Location(0, 0)):
+      xDelta = abs(self.location.xCoord - loc.xCoord)
+      yDelta = abs(self.location.yCoord - loc.yCoord)
       distance = xDelta + yDelta
       return distance
+
 
 class Player:
    '''core characteristics of a single game player'''
@@ -335,10 +340,9 @@ Total Goods Production:  %d
          i.dump()
 
 class GameShell(cmd.Cmd):
-   '''we'll presume a global Gameboard structure called g 
+   ''' we have a global Gameboard structure called g, estabalished in preloop() 
    this whole class is a giant hack
-   its purpose is simply to provide a test bed for game
-   functions
+   its purpose is simply to provide a test bed for game functions
    '''
    
    # overrides
@@ -354,6 +358,9 @@ class GameShell(cmd.Cmd):
       cmd.Cmd.preloop(self)
       self.g = GameBoard()
       
+   def postloop(self):
+      print 'Thanks for playing!\n'
+   
    def do_moveship(self,line):
       choice = GameUtilities.get_tty_input('x location? ')
       xspot = int(choice)
@@ -423,15 +430,12 @@ class GameShell(cmd.Cmd):
       self.activeColony = self.activePlayer.colonymaster[int(choice)-1]
       loc = self.activeColony.location
       self.activeSector = self.g.locateSector(loc)
-      
-
    
    def help_showsectors(self):
       print 'dumps details about all known sectors'
    def do_showsectors(self,line):
       print 'ready to dump known sectors'
       self.g.dump()
-         
   
    def do_status(self,line):
       statusstring = '''Active Player: %s
@@ -441,6 +445,13 @@ Active Ship: %s''' % (self.activePlayer.playerName, self.activeSector.location.t
                       self.activeColony.name, self.activeShip.name)
       print statusstring
       
+   def help_showgameboard(self):
+       print 'shows the gameboard as JSON'
+   def do_showgameboard(self,line):
+       print 'here is the gameoboard as JSON'
+       # do the thing here
+       json.dumps(g,enc=MyEncoder)
+
    def help_dump(self):
       print 'dumps the gameboard'
    def do_dump(self,line):
@@ -452,9 +463,6 @@ Active Ship: %s''' % (self.activePlayer.playerName, self.activeSector.location.t
    def do_EOF(self,line):
       return True
    
-   def postloop(self):
-      print 'Thanks for playing!\n'
-      
    ############### test routines ##########################   
    def do_makePage(self,line):
       done = False
@@ -485,7 +493,20 @@ End by using a line with only "..."
       gm = self.g
       sect = gm.sectorTable[0][0] # TODO - okay, let's make this more generalized now...
       print json.dumps(sect,cls=MyEncoder)
-      
+   
+   def help_spillmap(self):
+       print "emitting a 14x14 grid of sectors"
+   def do_spillmap(self,s):
+        print "populating a 14x14 region"
+        gm = self.g
+        m = [15][15]
+        for x in range(0,14):
+            for y in range (0,14):
+                m[x][y] = Sector(Location(x,y))
+        for x in range(0,14):
+            for y in range(0,14):
+                sect = gm.sectorTable[x][y]
+                print json.dumps(sect,cls=MyEncoder)
       
    def help_name(self):
       print 'test name generator'
