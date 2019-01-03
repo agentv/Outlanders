@@ -98,7 +98,8 @@ with them, so the data model is that of a sparsely populated grid.
 
 The coordinate system places the origin (0,0) at the upper left. The game premise is that an energy barrier
 surrounds the playable area such at all positive Y coordinates, all negative X coordinates are inaccessible.
-The "richness" of the sectors increases toward the center and the origin Sector is extraordinarily rich.
+The "richness" of the sectors increases toward the center and the origin Sector is extraordinarily rich. 
+(this concept is under review as possibly being too predictable.)
 
 As sectors are "discovered" their capacity is calculated. A random value for energy, food, and goods production
 is determined with higher general values toward the center. The origin sector has hard-coded capacities (although
@@ -106,4 +107,15 @@ this is not necessarily known to the players).
 
 All functions that govern the game overall are a part of the Gameboard. That includes the player roster,
 the game clock, the end-of-turn logic, and more.
+
+#### Gameboard Components
+
+- Player
+- Sector
+- SectorMap
+- Timer
+- MasterRegistry
+- MessageRegistry
+
+
 
