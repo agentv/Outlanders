@@ -61,7 +61,8 @@ class NameMaker():
       ltr = VariableDie(len(alphaSet)-1).roll()
       id1 = alphaSet[ltr]
       id2 = VariableDie(999).roll()
-      finalName = '%s%03d' % (id1, id2)
+      id3 = VariableDie(255).roll()
+      finalName = '%s%03d%03d' % (id1, id2, id3)
       return finalName
       
       
@@ -113,8 +114,6 @@ class Location3D():
         deltaY = yCoord - p.yCoord
         deltaZ = zCoord - p.zCoord
         return math.sqrt(deltaX**2 + deltaY**2 + deltaZ**2)
-
-
 
 class Location():
    ''' contains one 2-dimensional cartesian coord '''

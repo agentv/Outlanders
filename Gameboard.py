@@ -19,7 +19,7 @@ import GameUtilities
 from compiler.pyassem import DONE
 import CoreClasses 
 
-Ship = CoreClasses.Ship
+Ship = CoreClasses.Ship # localize these classes
 Colony = CoreClasses.Colony
 
 Location = GameUtilities.Location
@@ -289,7 +289,6 @@ Colony Present: %s
       distance = xDelta + yDelta
       return distance
 
-
 class Player:
    '''core characteristics of a single game player'''
    totalCropProduction = 0
@@ -343,10 +342,12 @@ class GameShell(cmd.Cmd):
    ''' we have a global Gameboard structure called g, estabalished in preloop() 
    this whole class is a giant hack
    its purpose is simply to provide a test bed for game functions
+   
+   TODO - This shell should be moved from the current file into a test/shell/Gameshell.py file
    '''
    
    # overrides
-   prompt = 'PODS command: '
+   prompt = '\nPODS command: $ '
    
    #globals for easy shell control
    activePlayer = Player()
@@ -450,7 +451,7 @@ Active Ship: %s''' % (self.activePlayer.playerName, self.activeSector.location.t
    def do_showgameboard(self,line):
        print 'here is the gameoboard as JSON'
        # do the thing here
-       json.dumps(g,enc=MyEncoder)
+       print json.dumps(self.g,enc=MyEncoder) # currently broken
 
    def help_dump(self):
       print 'dumps the gameboard'
@@ -490,23 +491,16 @@ End by using a line with only "..."
    def do_showRegistry(self,line):
       self.g.registry.dump()
    def do_sectorsjson(self,line):
-      gm = self.g
-      sect = gm.sectorTable[0][0] # TODO - okay, let's make this more generalized now...
-      print json.dumps(sect,cls=MyEncoder)
-   
-   def help_spillmap(self):
-       print "emitting a 14x14 grid of sectors"
-   def do_spillmap(self,s):
-        print "populating a 14x14 region"
-        gm = self.g
-        m = [15][15]
-        for x in range(0,14):
-            for y in range (0,14):
-                m[x][y] = Sector(Location(x,y))
-        for x in range(0,14):
-            for y in range(0,14):
-                sect = gm.sectorTable[x][y]
-                print json.dumps(sect,cls=MyEncoder)
+      for x in range(0,14):
+         if not x in self.g.sectorTable:
+            self.g.sectorTable[x] = {}
+         for y in range (0,14):
+            print "x is: |%s| -- and y is: |%s|" % (x,y)
+            self.g.sectorTable[x][y] = (Sector(Location(x,y)))
+      for x in range(0,14):
+         for y in range(0,14):
+            sect = self.g.sectorTable[x][y]
+            print json.dumps(sect,cls=MyEncoder)
       
    def help_name(self):
       print 'test name generator'
