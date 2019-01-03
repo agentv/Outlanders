@@ -8,13 +8,6 @@ class ToDo(object):
       self.x = 1
       """
       
-      * rig all core classes to be JSON serializable. that probably
-      just means adding an identifier field and noticing it when
-      the object is marshalled for deserialization -- the 
-      JSONDumpExample program will provide a model -- This almost done
-      Just need to be sure that Gameboard and MasterRegistry are both
-      serializable -- then the game can be saved and restored
-      
       * leave markers for when we'll add self.zc to the
       class definitions. When we do that, we'll be moving
       into the 3D space. The proper place for this.

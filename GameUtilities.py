@@ -17,11 +17,29 @@ class IDTimestamp ():
       oooooooo.yymmdd.hhmmss-salt
       where oooooooo is the note owner identifier.
    '''
-
+   tstring = ''
    def __init__(self):
       ts = time.time()
       candidate = datetime.datetime.fromtimestamp(ts).strftime('%y%m%d.%H%M%S')
+      self.tstring = '%s.%03d' % (candidate,VariableDie(1000).roll()) # added salt here... probably okay
+      
+   def newTS(self):
+      ts = time.time()
+      candidate = datetime.datetime.fromtimestamp(ts).strftime('%y%m%d.%H%M%S')
       return '%s.%03d' % (candidate,VariableDie(1000).roll()) # added salt here... probably okay
+      
+
+class NameMaker():
+   def grantName(self):
+      # get an alpha identifier - TODO this needs to be much better - use a time stamp at least
+      alphaSet = 'abcdefghijklm9876543210nopqrstuvwxyz'
+      ltr = VariableDie(len(alphaSet)-1).roll()
+      id1 = alphaSet[ltr]
+      id2 = VariableDie(999).roll()
+      id3 = VariableDie(255).roll()
+      idt = IDTimestamp().newTS()
+      finalName = '%s%s%03d%03d' % (idt, id1, id2, id3)
+      return finalName
 
 class VariableDie ():
    ''' Variable Die
@@ -69,17 +87,6 @@ class VariableDie ():
       print 'lowest is %d' % lowest
 
       ''' main test harness of VariableDie ends '''
-
-class NameMaker():
-   def grantName(self):
-      # get an alpha identifier - TODO this needs to be much better - use a time stamp at least
-      alphaSet = 'abcdefghijklm'
-      ltr = VariableDie(len(alphaSet)-1).roll()
-      id1 = alphaSet[ltr]
-      id2 = VariableDie(999).roll()
-      id3 = VariableDie(255).roll()
-      finalName = '%s%03d%03d' % (id1, id2, id3)
-      return finalName
 
 class NotePage():
    ''' this is a message that can be displayed in a variety of contexts '''

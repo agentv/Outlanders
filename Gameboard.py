@@ -65,6 +65,7 @@ stockSetup = {
 '''
 We might not need this custom encoder, but we'll put it here
 in case we want to modify it to deal with unusual conditions
+(it probably belongs in utils)
 '''
 class MyEncoder(json.JSONEncoder):
     def default(self, o):
@@ -309,18 +310,20 @@ class Player:
       '''grant starting resources and update globals'''
       self.playerName = nm
       self.generalMorale = 0
+      self.playerID = GameUtilities.NameMaker().grantName()
       
       self.colonymaster = []
       self.shipmaster = []
       
       self.dumpstring = '''
 Player Name:             %s
+Player ID:               %s
 Total Population:        %d
 Population Morale:       %d
 Total Crop Production:   %d
 Total Energy Production: %d
 Total Goods Production:  %d
-      ''' % (self.playerName, self.totalPopulation, self.generalMorale, 
+      ''' % (self.playerName, self.playerID, self.totalPopulation, self.generalMorale, 
              self.totalCropProduction, self.totalEnergyProduction, self.totalManufacturing)
       
    ''' end of Player constructor '''
@@ -612,7 +615,7 @@ End by using a line with only "..."
       print 'now a list of headers'
       print n.content['headers'].keys()
       
-      print 'now, can we find a specific Header?'
+      print 'now, can we find a specific Header (ie. Content-Type)?'
       print n.hasHeader('Content-Type')
       
       print 'also, change the content string, does that propogate to the object?'
@@ -621,19 +624,5 @@ End by using a line with only "..."
       
       print 'and now, the entire message:'
       n.dumpEntirely()
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       
       
