@@ -1,8 +1,8 @@
 #!/usr/local/bin/python
 
 '''
-module that contains the Game Board, Sector, Player, 
-and MasterRegistry
+module that contains the GameBoard, Sector, Player, 
+and MasterRegistry (for game objects), MessageRegistry
  
 it also contains test yokes for various system functions
 including the GameShell that allows console operation
@@ -226,10 +226,17 @@ class GameBoard:
    def getSector(self,loc=Location(0,0)): # this throws a key error if table not populated
       return (self.sectorTable[loc.xCoord][loc.yCoord])         
 
-
 class Sector:
    ''' core characteristics of any Sector '''
    
+   portAuthority = []  # list of ships in sector   
+   hasColony = False  # flag used now to prevent multiple colonies in one sector
+   resources = {
+            'capacity': {'farm':10,'energy':58,'prod':44},
+            'developed': {'farm':34,'energy':99,'prod':34}
+   }
+
+   # TODO - factor out these properties in favor of the map above   
    manufacturingCapacity = 0
    farmingCapacity = 0
    energyCapacity = 0
@@ -238,16 +245,27 @@ class Sector:
    farmingDeveloped = 0
    energyDeveloped = 0
    
-   portAuthority = []  # list of ships in sector
-   
-   hasColony = False  # flag used now to prevent multiple colonies in one sector
-   
    ''' add/remove quotes at end of line to enable or disable 
    colonyCommission = [] # list of colonies in sector - future development
    recreationalResources = 0 # future development (maybe)
    researchResources = 0 # future development (maybe)
    # end of future development section '''
-   
+
+   def __init__(self, l=Location(0, 0)):
+      self.location = l
+      xc = l.xCoord
+      yc = l.yCoord
+      
+      boost = 0  # added to resource calc when we know where
+      if xc < 400 or yc < 400: 
+         boost += 40
+      if xc < 200 or yc < 200:
+            boost += 40
+         
+      self.manufacturingCapacity = 20 + DieRoll(30).roll() + boost
+      self.farmingCapacity = 50 + DieRoll(30).roll() + boost
+      self.energyCapacity = 70 + DieRoll(20).roll() + boost
+                  
    def dump(self):
       dumpstring = '''====================================
 Sector at: %2d, %2d
@@ -263,26 +281,12 @@ Colony Present: %s
       print dumpstring
    
    def addShip(self, s):
+      doc = ''' insert a ship into the sector portAuthority '''
       self.portAuthority.append(s)
       
    def removeShip(self, s):
       self.portAuthority.remove(s)
       
-   def __init__(self, l=Location(0, 0)):
-      self.location = l
-      xc = l.xCoord
-      yc = l.yCoord
-      
-      boost = 0  # added to resource calc when we know where
-      if xc < 400 or yc < 400: 
-         boost += 40
-      if xc < 200 or yc < 200:
-            boost += 40
-         
-      self.manufacturingCapacity = 20 + DieRoll(30).roll() + boost
-      self.farmingCapacity = 50 + DieRoll(30).roll() + boost
-      self.energyCapacity = 70 + DieRoll(20).roll() + boost
-               
    def distanceTo (self, loc=Location(0, 0)):
       xDelta = abs(self.location.xCoord - loc.xCoord)
       yDelta = abs(self.location.yCoord - loc.yCoord)
@@ -297,15 +301,9 @@ class Player:
    totalPopulation = 0
    generalMorale = 0
    playerName = ''
-      
-   def addColony(self,co):
-      self.colonymaster.append(co)
-      self.totalPopulation += co.population
-      
-   def addShip(self,sh):
-      self.shipmaster.append(sh)
-      self.totalPopulation += sh.population
-        
+   playerID = ''
+   sectorTable = {}
+
    def __init__ (self, nm='Caligula'):
 
       '''grant starting resources and update globals'''
@@ -326,6 +324,17 @@ Total Goods Production:  %d
              self.totalCropProduction, self.totalEnergyProduction, self.totalManufacturing)
       
    ''' end of Player constructor '''
+
+   def knowSector(self,s):
+      ''' get location from sector s, then update my sectorTable to match '''
+      
+   def addColony(self,co):
+      self.colonymaster.append(co)
+      self.totalPopulation += co.population
+      
+   def addShip(self,sh):
+      self.shipmaster.append(sh)
+      self.totalPopulation += sh.population        
 
    def publish(self,note=NotePage()):
       note.setContent(self.dumpstring)

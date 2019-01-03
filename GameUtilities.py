@@ -1,11 +1,34 @@
 import random
 import math
+import time
+import datetime
 
 ''' game utility section begins '''
       
 def get_tty_input(prompt):
    print prompt
    return raw_input(" ")
+
+class IDTimestamp ():
+   '''
+      default constructor gives back a formatted string in the form:
+      
+      yymmdd.hhmmss
+      
+      for use in longer identifiers. For instance, a Note ID will probably be:
+      
+      oooooooo.yymmdd.hhmmss-salt
+      
+      where oooooooo is the note owner identifier.
+   '''
+
+   def __init__(self):
+      ts = time.time()
+      candidate = datetime.datetime.fromtimestamp(ts).strftime('%y%m%d.%H%M%S')
+      return '%s.%03d' % (candidate,VariableDie(1000).roll())
+
+
+   
 
 class VariableDie ():
    ''' Variable Die
@@ -64,11 +87,11 @@ class NameMaker():
       id3 = VariableDie(255).roll()
       finalName = '%s%03d%03d' % (id1, id2, id3)
       return finalName
-      
-      
+
 class NotePage():
    ''' this is a message that can be displayed in a variety of contexts '''
    contentString = ''
+   content = {"headers" : {}, "payload" : contentString}
    def __init__(self,msg='uninitialized'):
       self.contentString = msg
    def setContent(self,msg):
@@ -77,6 +100,8 @@ class NotePage():
       return self.contentString
    def dumpContent(self):
       print self.contentString
+   def addHeader(self,h,c):
+      self.content[h] = c
 
 class NoteBook():
    ''' this is a collection of note pages - one is assigned to each colony and ship as player scratchpad and log '''
@@ -126,9 +151,9 @@ class Location():
    def toString(self):
     return '(%d, %d)' % (self.xCoord,self.yCoord)
  
-   def distanceTo(self,loc=Location(0,0)):
-      deltaX = xCoord - p.xCoord
-      deltaY = yCoord - p.yCoord 
+   def distanceTo(self,loc):
+      deltaX = xCoord - loc.xCoord
+      deltaY = yCoord - loc.yCoord 
       return math.sqrt(deltaX**2 + deltaY**2)
    
    
