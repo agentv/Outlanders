@@ -9,6 +9,9 @@ def get_tty_input(prompt):
    print prompt
    return raw_input(" ")
 
+def radius(x):
+   return range(-x,x+1)
+
 class IDTimestamp ():
    '''
       default constructor gives back a formatted string in the form:
@@ -23,12 +26,6 @@ class IDTimestamp ():
       candidate = datetime.datetime.fromtimestamp(ts).strftime('%y%m%d.%H%M%S')
       self.tstring = '%s.%03d' % (candidate,VariableDie(1000).roll()) # added salt here... probably okay
       
-   def newTS(self):
-      ts = time.time()
-      candidate = datetime.datetime.fromtimestamp(ts).strftime('%y%m%d.%H%M%S')
-      return '%s.%03d' % (candidate,VariableDie(1000).roll()) # added salt here... probably okay
-      
-
 class NameMaker():
    def grantName(self):
       # get an alpha identifier - TODO this needs to be much better - use a time stamp at least
@@ -37,7 +34,7 @@ class NameMaker():
       id1 = alphaSet[ltr]
       id2 = VariableDie(999).roll()
       id3 = VariableDie(255).roll()
-      idt = IDTimestamp().newTS()
+      idt = IDTimestamp().tstring
       finalName = '%s%s%03d%03d' % (idt, id1, id2, id3)
       return finalName
 
@@ -96,6 +93,7 @@ class NotePage():
    
    def __init__(self,msg='uninitialized'):
       self.contentString = msg
+      self.noteID = NameMaker().grantName()
    def setContent(self,msg):
       self.contentString = msg
    def getContent(self):

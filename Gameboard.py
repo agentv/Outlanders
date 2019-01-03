@@ -120,23 +120,38 @@ class MasterRegistry:
 
 class GameBoard:
    ''' defines the characteristic of the full game board'''
+   
+   sectorTable = {}
+   registry = {}
+   playerTable = []
 
    def __init__(self):
-      self.sectorTable = {} # we use a dictionary to create a sparse matrix
       self.sectorTable[0] = {}
       self.addSector(Sector(Location(0,0)))
       
       self.playerTable = []
       
       self.registry = MasterRegistry()
-      self.startPositions()
+      self.startPositions() # temporary static setup
   
    def scanNeighbors(self,sect):
+      doc = ''' visits each sector within one hop and scans if needed '''
       xc = sect.location.xCoord
       yc = sect.location.yCoord
       for row in range(xc-1,xc+2): # check each neighbor and establish sectors where needed
          for col in range(yc-1,yc+2):
             rcstring = '(%d,%d)' % (row,col)
+            if not row in self.sectorTable:
+               self.sectorTable[row] = {}
+            if not col in self.sectorTable[row]:
+               self.addSector(Sector(Location(row,col)))
+               
+   def variableScan(self,sect,rad):
+      doc = ''' visits each sector within "rad" hops and scans if needed '''
+      xc = sect.location.xCoord
+      yc = sect.location.xCoord
+      for row in GameUtilities.radius(rad):
+         for col in GameUtilities.radius(rad):
             if not row in self.sectorTable:
                self.sectorTable[row] = {}
             if not col in self.sectorTable[row]:
