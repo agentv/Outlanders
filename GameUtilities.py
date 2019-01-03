@@ -125,6 +125,11 @@ class Location():
       
    def toString(self):
     return '(%d, %d)' % (self.xCoord,self.yCoord)
+ 
+   def distanceTo(self,loc=Location(0,0)):
+      deltaX = xCoord - p.xCoord
+      deltaY = yCoord - p.yCoord 
+      return math.sqrt(deltaX**2 + deltaY**2)
    
    
 
