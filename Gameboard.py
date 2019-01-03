@@ -26,7 +26,6 @@ Location = GameUtilities.Location
 NotePage = GameUtilities.NotePage
 DieRoll = GameUtilities.VariableDie
 
-
 # TODO - now that command-line processing is in place, use that to control
 # testing as development proceeds
 
@@ -34,7 +33,7 @@ DieRoll = GameUtilities.VariableDie
 
 
 # TODO - convert this static dictionary into a routine that reads from a JSON file
-'''
+doc = '''
 This stock setup table sets the Gameboard to a known configuration
 as a fixed way to start the game. In the long run, the plan should
 be to read this material in from a JSON dataset and to have a way
