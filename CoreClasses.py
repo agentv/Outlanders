@@ -24,7 +24,6 @@ class ToDo(object):
       that spring up ad-hoc and can dissolve rapidly, and the
       idea of alliances-of-alliances 
       
-   
       """
 
 
