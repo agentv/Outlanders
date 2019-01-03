@@ -10,7 +10,7 @@ def get_tty_input(prompt):
    return raw_input(" ")
 
 def radius(x):
-   return range(-x,x+1)
+   return range(-x,x+1) # helpful for scanning
 
 class IDTimestamp ():
    '''
