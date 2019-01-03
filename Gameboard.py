@@ -286,7 +286,7 @@ Colony Present: %s
    def distanceTo (self, loc=Location(0, 0)):
       xDelta = abs(self.location.xCoord - loc.xCoord)
       yDelta = abs(self.location.yCoord - loc.yCoord)
-      distance = xDelta + yDelta
+      distance = math.sqrt(xDelta**2 + yDelta**2)
       return distance
 
 class Player:
@@ -544,6 +544,8 @@ End by using a line with only "..."
       f.write(tbl)
       f.close()
       
+   def help_readNames(self):
+      print 'simply read from a resource file into memory'
    def do_readNames(self,line):
       localnames = []
       print 'ready to read names in'
@@ -553,3 +555,40 @@ End by using a line with only "..."
       f.close()
       for nm in localnames:
          print "another name is: %s" % nm 
+         
+   def do_bigTable(self,line):
+      doc = ''' 
+         This routine makes a file that is 25MB in size
+         it's just 140x140 - quite a few sectors, but
+         not big data by any means      
+       '''
+      print 'ready to make giant sector table'
+      t = self.g.sectorTable
+      for x in range(300,440):
+         if not x in t:
+            t[x] = {}
+         for y in range(300,440):
+            t[x][y] = (Sector(Location(x,y)))
+      print 'giant sector table created, now writing...'
+      fstore = open('resources/bigSectorTable.json', 'w')
+      tbl = json.dumps(t, cls=MyEncoder)
+      fstore.write(tbl)
+      fstore.close()
+      
+   def do_selectMapPages(self,line):
+      t = self.g.sectorTable
+      print 'ready to write out just select pages to a file'
+      origins = [[120,400],[270,600],[80,150],[400,390]]
+      for o in origins:
+         print 'mapping sectors from origin: %02d,%02d' % (o[0],o[1])
+         for x in range(o[0],o[0]+12):
+            if not x in t:
+               t[x] = {}
+            for y in range(o[1],o[1]+12):
+               t[x][y] = (Sector(Location(x,y)))
+         print 'map page created, now to write it to a file...'
+         fstore = open('resources/sectorTable.%03d%03d.json' % (o[0],o[1]),'w')
+         tbl = json.dumps(t,cls=MyEncoder)
+         fstore.write(tbl)
+         fstore.close()
+      
