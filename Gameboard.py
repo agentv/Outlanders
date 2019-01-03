@@ -601,3 +601,39 @@ End by using a line with only "..."
          fstore.write(tbl)
          fstore.close()
       
+   def do_noteHeaderTest(self,line):
+      ''' add a note, add a header, emit the note '''
+      n = NotePage('This is your sample note page')
+      n.addHeader('Content-Type','text/plain')
+      
+      print 'ready to show message content'
+      n.dumpContent()
+      
+      print 'now a list of headers'
+      print n.content['headers'].keys()
+      
+      print 'now, can we find a specific Header?'
+      print n.hasHeader('Content-Type')
+      
+      print 'also, change the content string, does that propogate to the object?'
+      n.setContent('Another message, in case you are listening.')
+      n.dumpContent() # proves that "content" contains a reference to "contentString"
+      
+      print 'and now, the entire message:'
+      n.dumpEntirely()
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      

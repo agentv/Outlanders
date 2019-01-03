@@ -12,23 +12,16 @@ def get_tty_input(prompt):
 class IDTimestamp ():
    '''
       default constructor gives back a formatted string in the form:
-      
       yymmdd.hhmmss
-      
       for use in longer identifiers. For instance, a Note ID will probably be:
-      
       oooooooo.yymmdd.hhmmss-salt
-      
       where oooooooo is the note owner identifier.
    '''
 
    def __init__(self):
       ts = time.time()
       candidate = datetime.datetime.fromtimestamp(ts).strftime('%y%m%d.%H%M%S')
-      return '%s.%03d' % (candidate,VariableDie(1000).roll())
-
-
-   
+      return '%s.%03d' % (candidate,VariableDie(1000).roll()) # added salt here... probably okay
 
 class VariableDie ():
    ''' Variable Die
@@ -91,7 +84,9 @@ class NameMaker():
 class NotePage():
    ''' this is a message that can be displayed in a variety of contexts '''
    contentString = ''
-   content = {"headers" : {}, "payload" : contentString}
+   content = {"headers" : {"dummy":1}, "payload" : contentString}
+   noteID = ''
+   
    def __init__(self,msg='uninitialized'):
       self.contentString = msg
    def setContent(self,msg):
@@ -100,8 +95,14 @@ class NotePage():
       return self.contentString
    def dumpContent(self):
       print self.contentString
+   def dumpEntirely(self):
+      for h in self.content['headers'].keys():
+         print '%s: %s' % (h,self.content['headers'][h])
+      self.dumpContent()
    def addHeader(self,h,c):
-      self.content[h] = c
+      self.content['headers'][h] = c
+   def hasHeader(self,h):
+      return h in self.content['headers']
 
 class NoteBook():
    ''' this is a collection of note pages - one is assigned to each colony and ship as player scratchpad and log '''
