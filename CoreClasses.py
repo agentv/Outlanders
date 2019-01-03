@@ -7,17 +7,13 @@ class ToDo(object):
    def __init__(self):
       self.x = 1
       """
-      * back out use of Location class from Organization
-      and replace it with self.xc and self.yc -- less critical
-      now that the json dump is fixed -- in fact, although the use
-      of Location is awkward in some places, the transformation of
-      the class into a 3-dimensional cartesian coord will allow the
-      game to grow organically.
       
       * rig all core classes to be JSON serializable. that probably
       just means adding an identifier field and noticing it when
       the object is marshalled for deserialization -- the 
-      JSONDumpExample program will provide a model
+      JSONDumpExample program will provide a model -- This almost done
+      Just need to be sure that Gameboard and MasterRegistry are both
+      serializable -- then the game can be saved and restored
       
       * leave markers for when we'll add self.zc to the
       class definitions. When we do that, we'll be moving

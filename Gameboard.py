@@ -414,16 +414,16 @@ class GameShell(cmd.Cmd):
       self.activeShip = self.activePlayer.shipmaster[int(choice)-1]
       loc = self.activeShip.location
       self.activeSector = self.g.locateSector(loc)
-       
-   
-   def help_selectcolony(self):
-      print 'select active colony from a numbered list'
+
    def do_showcolonies(self,line):
       ndx = 1
       print 'These are the colonies for player: %s' % self.activePlayer.playerName
       for colony in self.activePlayer.colonymaster:
          print '[%d] %s' % (ndx, colony.name)
          ndx += 1
+          
+   def help_selectcolony(self):
+      print 'select active colony from a numbered list'
    def do_selectcolony(self,line):
       self.do_showcolonies(line)
       choice = GameUtilities.get_tty_input('Which one? ')
@@ -451,7 +451,8 @@ Active Ship: %s''' % (self.activePlayer.playerName, self.activeSector.location.t
    def do_showgameboard(self,line):
        print 'here is the gameoboard as JSON'
        # do the thing here
-       print json.dumps(self.g,enc=MyEncoder) # currently broken
+       #print json.dumps(self.g,enc=MyEncoder) # currently broken
+       print self.g.dump()
 
    def help_dump(self):
       print 'dumps the gameboard'
@@ -490,12 +491,20 @@ End by using a line with only "..."
    
    def do_showRegistry(self,line):
       self.g.registry.dump()
-   def do_sectorsjson(self,line):
+
+   def help_jdumpSectors(self):
+      print "dump entire sector table as JSON"
+   def do_jdumpSectors(self,line):
+      print json.dumps(self.g.sectorTable,cls=MyEncoder)
+      
+   def help_initializeSectors(self):
+      print "simply populate a grid of sectors near the origin, and emit the JSON for each sector"
+   def do_initializeSectors(self,line):
       for x in range(0,14):
          if not x in self.g.sectorTable:
             self.g.sectorTable[x] = {}
          for y in range (0,14):
-            print "x is: |%s| -- and y is: |%s|" % (x,y)
+            #print "x is: |%s| -- and y is: |%s|" % (x,y)
             self.g.sectorTable[x][y] = (Sector(Location(x,y)))
       for x in range(0,14):
          for y in range(0,14):
@@ -508,6 +517,7 @@ End by using a line with only "..."
       # test that we can get a unique new name
       t = GameUtilities.NameMaker().grantName()
       print t
+
    def help_sectorfinder(self):
       print 'find a sector matching cartesian input ie: (x,y)'
    def do_sectorfinder(self,line):
@@ -517,6 +527,7 @@ End by using a line with only "..."
       yspot = int(choice)
       sect = self.g.locateSector(Location(xspot,yspot))
       sect.dump()
+
    def help_addplayer(self):
       print 'tests the addplayer functionality'
    def do_addplayer(self,line):
@@ -524,3 +535,21 @@ End by using a line with only "..."
       r.addPlayer(Player('Joan Watson'))
       r.dump()
 
+   def help_saveSectorTable(self):
+      print "write out the sector table as JSON file"
+   def do_saveSectorTable(self,line):
+      print 'ready to write sector table to file'
+      f = open("resources/sectortable.json", "w")
+      tbl = json.dumps(self.g.sectorTable,cls=MyEncoder)
+      f.write(tbl)
+      f.close()
+      
+   def do_readNames(self,line):
+      localnames = []
+      print 'ready to read names in'
+      f = open("resources/names","r")
+      for n in f:
+         localnames.append(n.rstrip('\n\t '))
+      f.close()
+      for nm in localnames:
+         print "another name is: %s" % nm 
