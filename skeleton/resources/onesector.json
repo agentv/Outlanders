@@ -1,0 +1,9 @@
+{
+	"farmingCapacity": 158, 
+	"location": {
+		"xCoord": 0, 
+		"yCoord": 0
+	}, 
+	"energyCapacity": 165, 
+	"manufacturingCapacity": 102
+}
