@@ -11,14 +11,31 @@ class ToDo(object):
       self.x = 1
       """
       
-      * leave markers for when we'll add self.zc to the
+      * FINAL DECISION: leave markers for when we'll add self.zc to the
       class definitions. When we do that, we'll be moving
       into the 3D space. The proper place for this.
       
+      time to start using 3D Location class in earnest, and for the moment, the
+      implementation will make use of a single-tied-in Z axis -- that allows for
+      simultaneous growth of experiementation and strategy. The infrastructure will
+      facilitate 3D operations when critical mass is achieved
+      
+      * begin using tools that visualize the dataset we've generated in the
+      GameShell -- give us a couple of those big datasets (~54MB) and we can
+      simply clip out areas of that region to play. If we preserve the action,
+      we can use those regions with existing activity as NPC cannon fodder for
+      new players
+      
       * add a timer - it provides a game time-reference
+      
+      BUT -- time reference will be relative to game turns,
+      so things could be simple at the start ...
+            
       it gives the player an Ajax element that does the
       countdown, but overall it's a function of the game
-      server and governs the end-of-turn processing
+      server and governs the end-of-turn processing (this is
+      more likely to be a function of a message queue that triggers
+      turn processing)
       
       * plan to add mechanism for alliances - they should be
       more dynamic than in the classic game model. There can
