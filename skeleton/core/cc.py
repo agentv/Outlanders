@@ -1,4 +1,4 @@
-
+module_name = 'CoreClasses'
 version='1.1'
 
 '''  Pods and the things we can build out of them '''

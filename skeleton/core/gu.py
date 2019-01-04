@@ -1,7 +1,11 @@
+module_name = 'GameUtilities'
+version = '1.1'
+
 import random
 import math
 import time
 import datetime
+import json
 
 ''' game utility section begins '''
      
@@ -11,6 +15,18 @@ def get_tty_input(prompt):
 
 def radius(x):
    return range(-x, x + 1)  # helpful for scanning
+
+'''
+We might not need this custom encoder, but we'll put it here
+in case we want to modify it to deal with unusual conditions
+(it probably belongs in utils)
+'''
+
+class MyEncoder(json.JSONEncoder):
+
+   def default(self, o):
+      return o.__dict__
+
 
 class IDTimestamp ():
    '''
