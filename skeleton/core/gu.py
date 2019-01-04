@@ -9,10 +9,8 @@ def get_tty_input(prompt):
    print prompt
    return raw_input(" ")
 
-
 def radius(x):
    return range(-x, x + 1)  # helpful for scanning
-
 
 class IDTimestamp ():
    '''
@@ -42,7 +40,6 @@ class NameMaker():
       idt = IDTimestamp().tstring
       finalName = '%s%s%03d%03d' % (idt, id1, id2, id3)
       return finalName
-
 
 class VariableDie ():
    ''' Variable Die
@@ -90,7 +87,6 @@ class VariableDie ():
 
       ''' main test harness of VariableDie ends '''
 
-
 class NotePage():
    ''' this is a message that can be displayed in a variety of contexts '''
    contentString = ''
@@ -121,7 +117,6 @@ class NotePage():
    def hasHeader(self, h):
       return h in self.content['headers']
 
-
 class NoteBook():
    ''' this is a collection of note pages - one is assigned to each colony and ship as player scratchpad and log '''
    pageList = []
@@ -139,7 +134,6 @@ class NoteBook():
    def dumpNotebook(self):
       for p in self.pageList:
          p.dumpContent()
-
 
 class Location3D():
    ''' contains a 3- dimensional cartesian coord '''
@@ -162,7 +156,6 @@ class Location3D():
       deltaY = self.yCoord - p.yCoord
       deltaZ = self.zCoord - p.zCoord
       return math.sqrt(deltaX ** 2 + deltaY ** 2 + deltaZ ** 2)
-
 
 class Location():
    ''' contains one 2-dimensional cartesian coord '''
