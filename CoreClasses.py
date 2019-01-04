@@ -1,3 +1,6 @@
+
+version='1.0'
+
 '''  Pods and the things we can build out of them '''
 import GameUtilities
 Location = GameUtilities.Location
