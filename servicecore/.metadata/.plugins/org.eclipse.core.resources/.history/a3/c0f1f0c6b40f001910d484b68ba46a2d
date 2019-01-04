@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="getNoteFlow" doc:id="cc3ec625-2c37-4962-bda6-329bf16e2a67" doc:description="This flow provides implementation for getNote">
+		<set-payload value="#[payload]" doc:name="Sample Message" doc:id="c0ee6c62-8f06-4f90-808b-b67e50930ae5" />
+	</flow>
+</mule>

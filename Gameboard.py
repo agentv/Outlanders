@@ -70,6 +70,29 @@ class MyEncoder(json.JSONEncoder):
     def default(self, o):
         return o.__dict__
 
+class MessageRegistry:
+   ''' 
+   This registry holds basic Note objects, but also manages sets of Notes such as
+   Notebooks, Journals, and Queues
+   '''
+   register = {}
+   def __init__(self):
+      self.register = {} # be sure
+      
+   def insertNote(self,nm,nt):
+      doc = ''' messages must come with a valid, unique name '''
+      self.register[nm] = nt
+      
+   def hasNote(self,nm):
+      return nm in self.register
+   
+   def dump(self):
+      dumpstring = 'Message Registry:\n====================\n'
+      rstring = ''
+      for id in self.register.keys():
+         rstring += '%s -> %s\n' % (id,self.register[id])
+      print '%s%s' % (dumpstring,rstring)
+
 class MasterRegistry:
    ''' 
    The Registry holds the Player, Ship, and Colony objects
@@ -121,7 +144,8 @@ class GameBoard:
    ''' defines the characteristic of the full game board'''
    
    sectorTable = {}
-   registry = {}
+   registry = {} # object master registry
+   legend = {} # message master registry
    playerTable = []
 
    def __init__(self):
@@ -131,6 +155,9 @@ class GameBoard:
       self.playerTable = []
       
       self.registry = MasterRegistry()
+      
+      self.legend = MessageRegistry()
+      
       self.startPositions() # temporary static setup
   
    def scanNeighbors(self,sect):
@@ -191,7 +218,7 @@ class GameBoard:
              that with a "turn 0" that allows them to roll up a bunch 
              of surplus resources into whatever they wish
          '''
-
+         
          co = Colony(plyr, stockSetup[p]['rssNames'][0], spot)
          plyr.addColony(co)
          self.registry.addColony(co)
@@ -231,7 +258,6 @@ class GameBoard:
          self.addSector(s)
          return s
       return self.sectorTable[ndx][ndy]
-
    
    def dump(self):
       for r in self.sectorTable.keys():
@@ -492,29 +518,6 @@ Active Ship: %s''' % (self.activePlayer.playerName, self.activeSector.location.t
       return True
    
    ############### test routines ##########################   
-   def do_makePage(self,line):
-      done = False
-      tempPage = NotePage('')
-      print '''
-This is simply a test to validate the structure and methods of the
-NotePage class. It uses a temporary NotePage that will be destroyed
-after the test succeeds.
-
-Type lines of input
-End by using a line with only "..."
-
-      '''
-      while (done != True):
-         #something
-         nextLine = GameUtilities.get_tty_input('line: ')
-         if (nextLine == '...'):
-            done = True
-         else:
-            # add it to the page
-            tempPage.setContent(tempPage.getContent() + '\n' + nextLine)
-      print 'Here is your page\n\n'
-      tempPage.dumpContent()        
-   
    def do_showRegistry(self,line):
       self.g.registry.dump()
 
@@ -524,7 +527,7 @@ End by using a line with only "..."
       print json.dumps(self.g.sectorTable,cls=MyEncoder)
       
    def help_initializeSectors(self):
-      print "simply populate a grid of sectors near the origin, and emit the JSON for each sector"
+      print "populate a 14x14 grid of sectors near the origin, then emit the JSON for each sector"
    def do_initializeSectors(self,line):
       for x in range(0,14):
          if not x in self.g.sectorTable:
@@ -570,9 +573,9 @@ End by using a line with only "..."
       f.write(tbl)
       f.close()
       
-   def help_readNames(self):
-      print 'simply read from a resource file into memory'
-   def do_readNames(self,line):
+   def help_readNamesMemory(self):
+      print '''simply read from a resource file into memory'''
+   def do_readNamesMemory(self,line):
       localnames = []
       print 'ready to read names in'
       f = open("resources/names","r")
@@ -581,6 +584,7 @@ End by using a line with only "..."
       f.close()
       for nm in localnames:
          print "another name is: %s" % nm 
+      return localnames
          
    def do_bigTable(self,line):
       doc = ''' 
@@ -618,6 +622,30 @@ End by using a line with only "..."
          fstore.write(tbl)
          fstore.close()
       
+   def do_noteEditorTest(self,line):
+      done = False
+      tempPage = NotePage('')
+      print '''
+This is simply a test to validate the structure and methods of the
+NotePage class. It uses a temporary NotePage that will be destroyed
+after the test succeeds.
+
+Type lines of input
+End by using a line with only "..."
+
+      '''
+      while (done != True):
+         #something
+         nextLine = GameUtilities.get_tty_input('line: ')
+         if (nextLine == '...'):
+            done = True
+         else:
+            # add it to the page
+            tempPage.setContent(tempPage.getContent() + '\n' + nextLine)
+      print 'Here is your page'
+      tempPage.dumpContent()        
+
+   
    def do_noteHeaderTest(self,line):
       ''' add a note, add a header, emit the note '''
       n = NotePage('This is your sample note page')
@@ -638,5 +666,25 @@ End by using a line with only "..."
       
       print 'and now, the entire message:'
       n.dumpEntirely()
+      
+   def do_noteStorageTest(self,line):
+      print 'creates a set of notes and stores them into MessageRegistry'
+      lines = self.do_readNamesMemory('blah!')
+      line_ct = len(lines)
+      # generate some number of messages
+      for m in xrange(0,20):
+         # select three random names from lines
+         manny = lines[DieRoll(line_ct-1).roll()]
+         moe = lines[DieRoll(line_ct-1).roll()]
+         jack = lines[DieRoll(line_ct-1).roll()]
+         missive = '%s%s%s' % (manny,moe,jack)
+         # you can tell when I'm getting loopy
+         # store message in Message Registry
+         np = NotePage(missive)
+         self.g.legend.insertNote(np.noteID, np)
+      
+      # dump Message Registry
+      self.g.legend.dump()
+      
       
       
