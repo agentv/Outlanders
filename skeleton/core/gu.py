@@ -1,5 +1,5 @@
 module_name = 'GameUtilities'
-version = '1.1'
+version = '1.1.190108'
 
 import random
 import math
@@ -106,12 +106,13 @@ class VariableDie ():
 class NotePage():
    ''' this is a message that can be displayed in a variety of contexts '''
    contentString = ''
-   content = {"headers" : {"dummy":1}, "payload" : contentString}
+   content = {'headers' : {'modified_date':1}, 'payload' : contentString}
    noteID = ''
    
    def __init__(self, msg='uninitialized'):
       self.contentString = msg
       self.noteID = NameMaker().grantName()
+      #self.content.headers{'modified_date'} = time.strftime('%yy%mm%dd%hh%mm%ss', time.gmtime())
 
    def setContent(self, msg):
       self.contentString = msg
@@ -125,6 +126,7 @@ class NotePage():
    def dumpEntirely(self):
       for h in self.content['headers'].keys():
          print '%s: %s' % (h, self.content['headers'][h])
+      print 'Content:'
       self.dumpContent()
 
    def addHeader(self, h, c):

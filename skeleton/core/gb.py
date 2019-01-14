@@ -1,5 +1,5 @@
 module_name = 'GameBoard'
-version = '1.1'
+version = '1.1.190108'
 
 '''
 module that contains the GameBoard, Sector, Player, 

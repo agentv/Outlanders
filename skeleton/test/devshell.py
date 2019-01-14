@@ -288,20 +288,20 @@ End by using a line with only "..."
       n = gu.NotePage('This is your sample note page')
       n.addHeader('Content-Type', 'text/plain')
       
-      print 'ready to show message content'
+      print '\n--> ready to show message content'
       n.dumpContent()
       
-      print 'now a list of headers'
+      print '\n--> now a list of headers'
       print n.content['headers'].keys()
       
-      print 'now, can we find a specific Header (ie. Content-Type)?'
+      print '\n--> now, can we find a specific Header (ie. Content-Type)?'
       print n.hasHeader('Content-Type')
       
-      print 'also, change the content string, does that propogate to the object?'
+      print '\n--> also, change the content string, does that propogate to the object?'
       n.setContent('Another message, in case you are listening.')
       n.dumpContent()  # proves that "content" contains a reference to "contentString"
       
-      print 'and now, the entire message:'
+      print '\n--> and now, the entire message:'
       n.dumpEntirely()
       
    def do_makeFile(self,line):
