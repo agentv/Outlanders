@@ -7,7 +7,8 @@
     <link href="/opentip/css/opentip.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<--
+
+<!--
 This demo illustrates how to use D3 to read in CSV data,
 then plot it on an SVG object according to values found
 in the data. It also uses a Tooltip libary (tooltip.js)
@@ -53,6 +54,7 @@ but for this demonstration, that is okay
 				d.power = +d.power
 			});
 
+			// draw what ya gotta draw
 			emapdiv.selectAll('circle')
 				.data(lines)
 				.enter().append('circle')
