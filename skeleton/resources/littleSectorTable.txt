@@ -1,0 +1,112 @@
+====================================
+Sector at: 30, 30
+Food (production/capacity): 0 / 140
+Energy (production/capacity): 0 / 166
+Goods (production/capacity): 0 / 122
+Colony Present: False
+====================================
+====================================
+Sector at: 30, 31
+Food (production/capacity): 0 / 158
+Energy (production/capacity): 0 / 153
+Goods (production/capacity): 0 / 128
+Colony Present: False
+====================================
+====================================
+Sector at: 30, 32
+Food (production/capacity): 0 / 135
+Energy (production/capacity): 0 / 160
+Goods (production/capacity): 0 / 112
+Colony Present: False
+====================================
+====================================
+Sector at: 30, 33
+Food (production/capacity): 0 / 160
+Energy (production/capacity): 0 / 163
+Goods (production/capacity): 0 / 103
+Colony Present: False
+====================================
+====================================
+Sector at: 31, 30
+Food (production/capacity): 0 / 148
+Energy (production/capacity): 0 / 164
+Goods (production/capacity): 0 / 126
+Colony Present: False
+====================================
+====================================
+Sector at: 31, 31
+Food (production/capacity): 0 / 140
+Energy (production/capacity): 0 / 156
+Goods (production/capacity): 0 / 108
+Colony Present: False
+====================================
+====================================
+Sector at: 31, 32
+Food (production/capacity): 0 / 159
+Energy (production/capacity): 0 / 169
+Goods (production/capacity): 0 / 119
+Colony Present: False
+====================================
+====================================
+Sector at: 31, 33
+Food (production/capacity): 0 / 137
+Energy (production/capacity): 0 / 155
+Goods (production/capacity): 0 / 118
+Colony Present: False
+====================================
+====================================
+Sector at: 32, 30
+Food (production/capacity): 0 / 135
+Energy (production/capacity): 0 / 161
+Goods (production/capacity): 0 / 101
+Colony Present: False
+====================================
+====================================
+Sector at: 32, 31
+Food (production/capacity): 0 / 140
+Energy (production/capacity): 0 / 163
+Goods (production/capacity): 0 / 117
+Colony Present: False
+====================================
+====================================
+Sector at: 32, 32
+Food (production/capacity): 0 / 148
+Energy (production/capacity): 0 / 162
+Goods (production/capacity): 0 / 127
+Colony Present: False
+====================================
+====================================
+Sector at: 32, 33
+Food (production/capacity): 0 / 151
+Energy (production/capacity): 0 / 168
+Goods (production/capacity): 0 / 112
+Colony Present: False
+====================================
+====================================
+Sector at: 33, 30
+Food (production/capacity): 0 / 134
+Energy (production/capacity): 0 / 156
+Goods (production/capacity): 0 / 120
+Colony Present: False
+====================================
+====================================
+Sector at: 33, 31
+Food (production/capacity): 0 / 153
+Energy (production/capacity): 0 / 154
+Goods (production/capacity): 0 / 114
+Colony Present: False
+====================================
+====================================
+Sector at: 33, 32
+Food (production/capacity): 0 / 147
+Energy (production/capacity): 0 / 152
+Goods (production/capacity): 0 / 129
+Colony Present: False
+====================================
+====================================
+Sector at: 33, 33
+Food (production/capacity): 0 / 154
+Energy (production/capacity): 0 / 154
+Goods (production/capacity): 0 / 130
+Colony Present: False
+====================================

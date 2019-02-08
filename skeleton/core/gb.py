@@ -1,5 +1,5 @@
 module_name = 'GameBoard'
-version = '1.1.190108'
+version = '1.1.190206'
 
 '''
 module that contains the GameBoard, Sector, Player, 
@@ -16,6 +16,7 @@ such as randomizer (dice) and a sector map
 import gu
 import cc 
 
+import json
 import math
 
 Ship = cc.Ship  # localize these classes
@@ -58,7 +59,6 @@ stockSetup = {
        'rssNames': ('Botany Bay', 'Kennedy', 'Eisenhower')
    }
 }
-
 
 class MessageRegistry:
    ''' 
@@ -144,7 +144,7 @@ class GameBoard:
 
    def __init__(self):
       self.sectorTable[0] = {}
-      self.addSector(Sector(Location(0, 0)))
+      self.addSector(Sector(Location(0, 0))) # this may need more thought
       
       self.playerTable = []
       
@@ -267,6 +267,7 @@ class Sector:
    
    portAuthority = []  # list of ships in sector   
    hasColony = False  # flag used now to prevent multiple colonies in one sector
+
    resources = {
             'capacity': {'farm':10, 'energy':58, 'prod':44},
             'developed': {'farm':34, 'energy':99, 'prod':34}
@@ -281,7 +282,7 @@ class Sector:
    farmingDeveloped = 0
    energyDeveloped = 0
    
-   ''' add/remove quotes at end of line to enable or disable 
+   ''' add/remove quotes at end of line to enable/disable
    colonyCommission = [] # list of colonies in sector - future development
    recreationalResources = 0 # future development (maybe)
    researchResources = 0 # future development (maybe)
@@ -302,6 +303,13 @@ class Sector:
       self.farmingCapacity = 50 + DieRoll(30).roll() + boost
       self.energyCapacity = 70 + DieRoll(20).roll() + boost
                   
+   def jdump(self):
+      doc = ''' returns this sector as json '''
+      return json.dumps(self)
+      
+      
+      
+      
    def dump(self):
       dumpstring = '''====================================
 Sector at: %2d, %2d
@@ -309,12 +317,13 @@ Food (production/capacity): %d / %d
 Energy (production/capacity): %d / %d
 Goods (production/capacity): %d / %d
 Colony Present: %s
-====================================''' % (self.location.xCoord, self.location.yCoord,
+====================================\n''' % (self.location.xCoord, self.location.yCoord,
                                           self.farmingDeveloped, self.farmingCapacity,
                                           self.energyDeveloped, self.energyCapacity,
                                           self.manufacturingDeveloped, self.manufacturingCapacity,
                                           self.hasColony)
       print dumpstring
+      return dumpstring
    
    def addShip(self, s):
       # insert a ship into the sector portAuthority

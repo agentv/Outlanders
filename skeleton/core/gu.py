@@ -27,7 +27,6 @@ class MyEncoder(json.JSONEncoder):
    def default(self, o):
       return o.__dict__
 
-
 class IDTimestamp ():
    '''
       default constructor gives back a formatted string in the form:
@@ -43,7 +42,6 @@ class IDTimestamp ():
       candidate = datetime.datetime.fromtimestamp(ts).strftime('%y%m%d.%H%M%S')
       self.tstring = '%s.%03d' % (candidate, VariableDie(1000).roll())  # added salt here... probably okay
 
-      
 class NameMaker():
 
    def grantName(self):
@@ -104,7 +102,10 @@ class VariableDie ():
       ''' main test harness of VariableDie ends '''
 
 class NotePage():
-   ''' this is a message that can be displayed in a variety of contexts '''
+   ''' this is a message that can be displayed in a variety of contexts
+      it is a core element of the game. Commands, reminders, communications,
+      journals, notebooks, they are all implemented as instances of NotePage
+   '''
    contentString = ''
    content = {'headers' : {'modified_date':1}, 'payload' : contentString}
    noteID = ''
@@ -136,7 +137,8 @@ class NotePage():
       return h in self.content['headers']
 
 class NoteBook():
-   ''' this is a collection of note pages - one is assigned to each colony and ship as player scratchpad and log '''
+   ''' this is a collection of note pages - one is assigned to each colony and ship 
+   as player scratchpad and log - other notebooks can exist as game elements '''
    pageList = []
 
    def __init__(self, c=NotePage('Cover Page')):
@@ -176,7 +178,10 @@ class Location3D():
       return math.sqrt(deltaX ** 2 + deltaY ** 2 + deltaZ ** 2)
 
 class Location():
-   ''' contains one 2-dimensional cartesian coord '''
+   ''' contains one 2-dimensional cartesian coord -- actually, it should be simply a coordinate
+      Using overloading, when a method only knows two dimensions, they will be X and Y - with Z being
+      set to zero by default. We will remove the "Location3D" class soon
+   '''
    xCoord = 0
    yCoord = 0
 

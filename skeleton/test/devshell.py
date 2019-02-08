@@ -1,8 +1,7 @@
-'''
-Created on Jan 3, 2019
+module_name = 'devshell'
+version = '1.1.190206'
 
-@author: VincentLowe
-'''
+
 import cmd
 import json
 
@@ -13,11 +12,9 @@ import gu
 DieRoll = gu.VariableDie
 
 class GameShell(cmd.Cmd):
-   ''' we have a global Gameboard structure called g, estabalished in preloop() 
+   doc = ''' we have a global Gameboard structure called g, established in preloop() 
    this whole class is a giant hack
    its purpose is simply to provide a test bed for game functions
-   
-   TODO - This shell should be moved from the current file into a test/devshell.py file
    '''
    
    # overrides
@@ -224,8 +221,31 @@ Active Ship: %s''' % (self.activePlayer.playerName, self.activeSector.location.t
          print "another name is: %s" % nm 
       return localnames
          
+   def do_plainTable(self, line):
+      doc = ''' how this works '''   
+      regionmap = ''   
+      print 'ready to make giant sector table'
+      t = self.g.sectorTable
+      for x in range(30, 34):
+         if not x in t:
+            t[x] = {}
+         for y in range(30, 34):
+            t[x][y] = (gb.Sector(gu.Location(x, y)))
+      print 'little sector table created, now writing...'
+      fstore = open('resources/littleSectorTable.txt', 'w')
+      
+      for x in range(30,34):
+         for y in range(30,34):
+            regionmap += t[x][y].dump()
+      
+      fstore.write(regionmap)
+      fstore.close()
+
+
    def do_bigTable(self, line):
-      ''' 
+      doc = ''' 
+         BROKEN: well, it used to do this...
+         
          This routine makes a file that is 25MB in size
          it's just 140x140 - quite a few sectors, but
          not big data by any means      
@@ -239,7 +259,7 @@ Active Ship: %s''' % (self.activePlayer.playerName, self.activeSector.location.t
             t[x][y] = (gb.Sector(gu.Location(x, y)))
       print 'giant sector table created, now writing...'
       fstore = open('resources/bigSectorTable.json', 'w')
-      tbl = json.dumps(t)
+      tbl = json.dumps(t) # json.dumps() is probably what breaks here
       fstore.write(tbl)
       fstore.close()
       
@@ -256,7 +276,7 @@ Active Ship: %s''' % (self.activePlayer.playerName, self.activeSector.location.t
                t[x][y] = (gb.Sector(gu.Location(x, y)))
          print 'map page created, now to write it to a file...'
          fstore = open('resources/sectorTable.%03d%03d.json' % (o[0], o[1]), 'w')
-         tbl = json.dumps(t)
+         tbl = json.dumps(t) # same thing... this breaks
          fstore.write(tbl)
          fstore.close()
       
@@ -311,7 +331,9 @@ End by using a line with only "..."
       fhandle.close()
       
    def do_noteStorageTest(self, line):
-      print 'creates a set of notes and stores them into MessageRegistry'
+      print '''
+      creates a set of notes and stores them into MessageRegistry
+      '''
       lines = self.do_readNamesMemory('blah!')
       line_ct = len(lines)
       # generate some number of messages
