@@ -1,0 +1,11 @@
+This short and elegant experiment demonstrates how many elements can be working at the same time.
+
+It is adapted from the Random Motion example using D3. (http://bl.ocks.org/syntagmatic/5107530)
+
+Original Author: Kai (syntagmatic) - https://github.com/syntagmatic
+
+When you ask for 20,000 elements, the motion is still dramatic in a web browser
+
+For this project, it points to  a dynamic look and feel 
+that's possible in many display clients for the game.
+

@@ -2,9 +2,7 @@
 Python Model for exploration and industry game
 
 ## Usage
-When this is finished, it will be deployed as a web application implemented as Python core code (server) and
-delivered as HTML5 pages with Javascript. It's probably that the front-end will use D3.js and possibly
-Opentip.js along with other libraries. We'll see
+When this is finished, it will be deployed as a web application implemented as Python core code (server) and delivered as NoteBook objects as implemented in the game. Maps, unit status, game communications, all can be encapsulated in a NoteBook.
 
 ## Backstory
 Mankind has at last inherited the stars. With the invention of reliable FTL drive, and long-range scout ships, it is 
@@ -13,8 +11,7 @@ finally possible for humanity to move into the vastness of space and colonize th
 Using modular components (Pods) a society can expand using ships and founding colonies in newly scouted sectors of
 outer space.
 
-Unmanned scout ships roam the spaceways looking for habitable new worlds, and groups of humans travel in colony 
-ships to claim and shape the worlds that turn up.
+Unmanned scout ships roam the spaceways looking for habitable new worlds, and groups of humans travel in colony ships to claim and shape the worlds that turn up.
 
 Each player in this game controls one society in a shared universe. Ships can move to promising locations, or sit
 still and conduct operations in its current sector. They can harvest energy, produce food or goods, or make more
@@ -62,7 +59,7 @@ versions of the game
 food for their inherent crews.
 * Defense Pods - These Pods can absorb damage from attackers. They consume energy and food.
 * Attack Pods - These Pods can be used to attack other ships and colonies. The consume energy and food.
-When attacks are made, the Attack Pods double their energy consumption.
+During attacks, the Attack Pods double their energy consumption.
 * Ship Pods - This is the basic Pod that represents a ship central hull. For the most part, the function of
 a ship is defined by the collection of Pods that comprise it. But every ship must have a central hull. Advanced
 versions of the game may grant additional abilities through the hull
@@ -117,5 +114,7 @@ the game clock, the end-of-turn logic, and more.
 - MasterRegistry
 - MessageRegistry
 
+#### Project Status
 
+190208 - add project status section. check README management in git repo. 
 
