@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+    <script src="/opentip/lib/opentip.js"></script>
+    <script src="/opentip/lib/adapter-native.js"></script>
+    <link href="/opentip/css/opentip.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+    <div id="omap"></div>
+    
+    <script type="text/javascript">
+    // we expect D3 and tooltip.js to be loaded
+	var cells = 16;
+    var width = 24;
+    var height = 24;
+    var margin = 12;
+    var bigmapwidth = (margin*2)+(cells*width);
+    var bigmapheight = (margin*2)+(cells*height);
+    
+    function transformX(d) { return (d * width + margin)  }
+	function transformY(d) { return (d * height + margin) }
+    
+    
+    
+    
+	</script>
+</body>
+</html>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
-    <script src="/opentip/lib/opentip.js"></script>
-    <script src="/opentip/lib/adapter-native.js"></script>
-    <link href="/opentip/css/opentip.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+<script src="/opentip/lib/opentip.js"></script>
+<script src="/opentip/lib/adapter-native.js"></script>
+<link href="/opentip/css/opentip.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<--
+	<!--
 This demo illustrates how to use D3 to read in CSV data,
 then plot it on an SVG object according to values found
 in the data. It also uses a Tooltip libary (tooltip.js)
@@ -19,75 +19,75 @@ but for this demonstration, that is okay
 
 -->
 
-    <div id="emap"></div>
-    
-    <script type="text/javascript">
-    // we need D3 and tooltip.js loaded
-    
-    var cells = 600;
-    var width = 8;
-    var height = 8;
-    var margin = 30;   
-    var bigmapwidth = (margin*2)+(cells*width);
-    var bigmapheight = (margin*2)+(cells*height);
-    
-    var idle_element = "red"
-    var idle_stroke = "blue"
-    var select_element = "skyblue"
-    var select_stroke = "yellow"
-    
-    function transformX(d) { return (d * width + margin)  }
-	function transformY(d) { return (d * height + margin) }
-	
-	var emapdiv = d3.select("#emap")
-		.append("svg")
-		.attr("height", bigmapheight)
-		.attr("width", bigmapwidth)
+	<div id="emap"></div>
 
-	// name,xcoord,ycoord,rss,power,alliance
-	// VT,159,-59,,20309,Galactica
-	d3.csv("data/EmpireCheckpointZulu.csv", function(lines){
-			lines.forEach( function (d) {
+	<script type="text/javascript">
+		// we need D3 and tooltip.js loaded
+
+		var cells = 600;
+		var width = 8;
+		var height = 8;
+		var margin = 30;
+		var bigmapwidth = (margin * 2) + (cells * width);
+		var bigmapheight = (margin * 2) + (cells * height);
+
+		var idle_element = "red"
+		var idle_stroke = "blue"
+		var select_element = "skyblue"
+		var select_stroke = "yellow"
+
+		function transformX(d) {
+			return (d * width + margin)
+		}
+		function transformY(d) {
+			return (d * height + margin)
+		}
+
+		var emapdiv = d3.select("#emap").append("svg").attr("height",
+				bigmapheight).attr("width", bigmapwidth)
+
+		// name,xcoord,ycoord,rss,power,alliance
+		// VT,159,-59,,20309,Galactica
+		d3.csv("data/EmpireCheckpointZulu.csv", function(lines) {
+			lines.forEach(function(d) {
 				d.xcoord = +d.xcoord
 				d.ycoord = Math.abs(d.ycoord)
 				d.power = +d.power
 			});
 
-			emapdiv.selectAll('circle')
-				.data(lines)
-				.enter().append('circle')
-				.style("fill", idle_element)
-				.style("stroke", idle_stroke)
-				.attr("cx", function(d) {return transformX(d.xcoord)})
-				.attr("cy", function(d) {return transformY(d.ycoord)})
-				.attr("r", width/2)					
-				// tooltip call for empire data
-				.each(function(d,i){
-					t = new Opentip(this, {'style': 'dark'});
-					t.setContent(
-						'Commander: ' + d.name +
-						'<br/>Power: ' + d.power + 
-						'<br/>Location: ' + d.xcoord + ','+ d.ycoord +
-						'<br/>Alliance: ' + d.alliance
-						
-					);
-				})
-				.on('mouseover', function(d, i){ 
-					d3.select(this).style({
-							fill: (select_element),
-							stroke: (select_stroke)
-					});
-				})
-				.on('mouseout', function(d, i){
-					d3.select(this).style({
-						fill: (idle_element),
-						stroke: (idle_stroke)
-					});
-				});
-				
-		}
-	);
+			emapdiv.selectAll('circle').data(lines).enter().append('circle')
+					.style("fill", idle_element).style("stroke", idle_stroke)
+					.attr("cx", function(d) {
+						return transformX(d.xcoord)
+					}).attr("cy", function(d) {
+						return transformY(d.ycoord)
+					}).attr("r", width / 2)
+					// tooltip call for empire data
+					.each(
+							function(d, i) {
+								t = new Opentip(this, {
+									'style' : 'dark'
+								});
+								t.setContent('Commander: ' + d.name
+										+ '<br/>Power: ' + d.power
+										+ '<br/>Location: ' + d.xcoord + ','
+										+ d.ycoord + '<br/>Alliance: '
+										+ d.alliance
 
-    </script>   
+								);
+							}).on('mouseover', function(d, i) {
+						d3.select(this).style({
+							fill : (select_element),
+							stroke : (select_stroke)
+						});
+					}).on('mouseout', function(d, i) {
+						d3.select(this).style({
+							fill : (idle_element),
+							stroke : (idle_stroke)
+						});
+					});
+
+		});
+	</script>
 </body>
 </html>
