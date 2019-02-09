@@ -116,5 +116,6 @@ the game clock, the end-of-turn logic, and more.
 
 #### Project Status
 
-190208 - add project status section. check README management in git repo. 
+190209 - clearly, the UX needs some help to invigorate this project. adding a tangent that includes D3 examples that will find their way into the code base is the next step here. Sector display, and Organization display seem to be the next most useful things to develop.
 
+190208 - add project status section. check README management in git repo. 
