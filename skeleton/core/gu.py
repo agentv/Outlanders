@@ -1,5 +1,5 @@
 module_name = 'GameUtilities'
-version = '1.1.190108'
+version = '1.1.190523'
 
 import random
 import math

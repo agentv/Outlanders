@@ -109,12 +109,17 @@ the game clock, the end-of-turn logic, and more.
 
 - Player
 - Sector
-- SectorMap
+- SectorMap - an SVG depicting a plot (with filtering)
 - Timer
 - MasterRegistry
 - MessageRegistry
+- Plot - a 16x16 section of the game surface (later 16^3)
 
 #### Project Status
+
+190527 - (laughs!) It's still time to implement the note server. And the breakthrough this time was an engine (written as a Mule app in Anypoint Studio) that can generate and store patches of the map. New game object now. The "plot" -- it is a 16x16 fragment of the game map.
+
+190523 - It's time to implement the note server. It should be an object store that holds notes according to their key (a construct that consists of object type, timestamp, and a salt component that eliminates namespace collision. A function (NameMaker() in gu.py) is already present to create such keys. ---- after some thought, believe I have to do a spoon-over, and maybe model the objects in Java. Haven't settled on that outcome, but I'm feeling that, especially if I want to use a Mule Runtime for the server. Maybe low-level objects (Pods, Notes) can be modeled in Java, and the higher-order elements (Sector, Ship, Gameboard) could be modeled in JSON or YAML. Thinking about that now.
 
 190209 - clearly, the UX needs some help to invigorate this project. adding a tangent that includes D3 examples that will find their way into the code base is the next step here. Sector display, and Organization display seem to be the next most useful things to develop.
 

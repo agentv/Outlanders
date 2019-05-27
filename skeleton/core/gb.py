@@ -13,8 +13,8 @@ The Gameboard hosts all of the actual game functions
 such as randomizer (dice) and a sector map
 '''
 
-import gu
-import cc 
+import gu # game utilities
+import cc # core classes
 
 import json
 import math
@@ -26,8 +26,6 @@ Location = gu.Location
 NotePage = gu.NotePage
 DieRoll = gu.VariableDie
 
-# TODO - now that command-line processing is in place, use that to control
-# testing as development proceeds
 
 # Overall game elements, game board, players, and game squares (ie. sectors)
 
@@ -389,6 +387,7 @@ Total Goods Production:  %d
       return note
            
    def dump(self):
+      ''' dump details about one player '''
       print '%s' % self.dumpstring      
       for i in self.colonymaster:
          i.dump()

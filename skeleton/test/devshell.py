@@ -43,6 +43,9 @@ class GameShell(cmd.Cmd):
          print 'that worked!'
       else:
          print 'that did not work'
+         print 'current active ship: '
+         self.activeShip.dump()
+         
       
    def help_dumpplayers(self):
       print 'show details for all players'
