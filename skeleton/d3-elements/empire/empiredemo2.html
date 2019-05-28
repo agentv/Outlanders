@@ -43,8 +43,9 @@ but for this demonstration, that is okay
 			return (d * height + margin)
 		}
 
-		var emapdiv = d3.select("#emap").append("svg").attr("height",
-				bigmapheight).attr("width", bigmapwidth)
+		var emapdiv = d3.select("#emap").append("svg")
+			.attr("height", bigmapheight)
+			.attr("width", bigmapwidth)
 
 		// name,xcoord,ycoord,rss,power,alliance
 		// VT,159,-59,,20309,Galactica
@@ -55,8 +56,10 @@ but for this demonstration, that is okay
 				d.power = +d.power
 			});
 
-			emapdiv.selectAll('circle').data(lines).enter().append('circle')
-					.style("fill", idle_element).style("stroke", idle_stroke)
+			emapdiv.selectAll('circle').data(lines).enter()
+				.append('circle')
+					.style("fill", idle_element)
+					.style("stroke", idle_stroke)
 					.attr("cx", function(d) {
 						return transformX(d.xcoord)
 					}).attr("cy", function(d) {
