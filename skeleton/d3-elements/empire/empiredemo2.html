@@ -43,7 +43,8 @@ but for this demonstration, that is okay
 			return (d * height + margin)
 		}
 
-		var emapdiv = d3.select("#emap").append("svg")
+		var emapdiv = d3.select("#emap")
+			.append("svg")
 			.attr("height", bigmapheight)
 			.attr("width", bigmapwidth)
 
@@ -67,26 +68,20 @@ but for this demonstration, that is okay
 					}).attr("r", width / 2)
 					// tooltip call for empire data
 					.each(
-							function(d, i) {
-								t = new Opentip(this, {
-									'style' : 'dark'
-								});
-								t.setContent('Commander: ' + d.name
-										+ '<br/>Power: ' + d.power
-										+ '<br/>Location: ' + d.xcoord + ','
-										+ d.ycoord + '<br/>Alliance: '
-										+ d.alliance
-								);
-							}).on('mouseover', function(d, i) {
-						d3.select(this).style({
-							fill : (select_element),
-							stroke : (select_stroke)
-						});
-					}).on('mouseout', function(d, i) {
-						d3.select(this).style({
-							fill : (idle_element),
-							stroke : (idle_stroke)
-						});
+						function(d, i) {
+							t = new Opentip(this, {'style' : 'dark'});
+							t.setContent('Commander: ' + d.name
+									+ '<br/>Power: ' + d.power
+									+ '<br/>Location: ' + d.xcoord + ','
+									+ d.ycoord + '<br/>Alliance: '
+									+ d.alliance);
+						}
+					)
+					.on('mouseover', function(d, i) {
+						d3.select(this).style({	fill : (select_element), stroke : (select_stroke)});
+					})
+					.on('mouseout', function(d, i) {
+						d3.select(this).style({ fill : (idle_element), stroke : (idle_stroke)});
 					});
 
 		});
