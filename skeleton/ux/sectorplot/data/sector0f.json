@@ -1,0 +1,2562 @@
+[
+  {
+    "sectorKey": "00000000.2019-06-02T11:37:12.037-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 0
+    },
+    "energy": 288.0,
+    "farm": 126.0,
+    "factory": 211.0
+  },
+  {
+    "sectorKey": "00010000.2019-06-02T11:37:12.047-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 1
+    },
+    "energy": 280.0,
+    "farm": 169.0,
+    "factory": 184.0
+  },
+  {
+    "sectorKey": "00020000.2019-06-02T11:37:12.048-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 2
+    },
+    "energy": 322.0,
+    "farm": 129.0,
+    "factory": 190.0
+  },
+  {
+    "sectorKey": "00030000.2019-06-02T11:37:12.049-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 3
+    },
+    "energy": 287.0,
+    "farm": 154.0,
+    "factory": 167.0
+  },
+  {
+    "sectorKey": "00040000.2019-06-02T11:37:12.05-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 4
+    },
+    "energy": 303.0,
+    "farm": 145.0,
+    "factory": 182.0
+  },
+  {
+    "sectorKey": "00050000.2019-06-02T11:37:12.051-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 5
+    },
+    "energy": 303.0,
+    "farm": 168.0,
+    "factory": 204.0
+  },
+  {
+    "sectorKey": "00060000.2019-06-02T11:37:12.052-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 6
+    },
+    "energy": 321.0,
+    "farm": 149.0,
+    "factory": 179.0
+  },
+  {
+    "sectorKey": "00070000.2019-06-02T11:37:12.053-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 7
+    },
+    "energy": 321.0,
+    "farm": 142.0,
+    "factory": 198.0
+  },
+  {
+    "sectorKey": "00080000.2019-06-02T11:37:12.053-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 8
+    },
+    "energy": 325.0,
+    "farm": 151.0,
+    "factory": 169.0
+  },
+  {
+    "sectorKey": "00090000.2019-06-02T11:37:12.054-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 9
+    },
+    "energy": 297.0,
+    "farm": 130.0,
+    "factory": 215.0
+  },
+  {
+    "sectorKey": "00100000.2019-06-02T11:37:12.054-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 10
+    },
+    "energy": 280.0,
+    "farm": 127.0,
+    "factory": 200.0
+  },
+  {
+    "sectorKey": "00110000.2019-06-02T11:37:12.055-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 11
+    },
+    "energy": 319.0,
+    "farm": 141.0,
+    "factory": 202.0
+  },
+  {
+    "sectorKey": "00120000.2019-06-02T11:37:12.056-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 12
+    },
+    "energy": 304.0,
+    "farm": 133.0,
+    "factory": 197.0
+  },
+  {
+    "sectorKey": "00130000.2019-06-02T11:37:12.056-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 13
+    },
+    "energy": 287.0,
+    "farm": 158.0,
+    "factory": 195.0
+  },
+  {
+    "sectorKey": "00140000.2019-06-02T11:37:12.057-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 14
+    },
+    "energy": 317.0,
+    "farm": 139.0,
+    "factory": 173.0
+  },
+  {
+    "sectorKey": "00150000.2019-06-02T11:37:12.058-07:00",
+    "location": {
+      "xCoord": 0,
+      "yCoord": 15
+    },
+    "energy": 275.0,
+    "farm": 150.0,
+    "factory": 215.0
+  },
+  {
+    "sectorKey": "00000001.2019-06-02T11:37:12.058-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 0
+    },
+    "energy": 308.0,
+    "farm": 132.0,
+    "factory": 184.0
+  },
+  {
+    "sectorKey": "00010001.2019-06-02T11:37:12.059-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 1
+    },
+    "energy": 297.0,
+    "farm": 154.0,
+    "factory": 219.0
+  },
+  {
+    "sectorKey": "00020001.2019-06-02T11:37:12.059-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 2
+    },
+    "energy": 288.0,
+    "farm": 131.0,
+    "factory": 216.0
+  },
+  {
+    "sectorKey": "00030001.2019-06-02T11:37:12.061-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 3
+    },
+    "energy": 329.0,
+    "farm": 129.0,
+    "factory": 184.0
+  },
+  {
+    "sectorKey": "00040001.2019-06-02T11:37:12.062-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 4
+    },
+    "energy": 322.0,
+    "farm": 128.0,
+    "factory": 189.0
+  },
+  {
+    "sectorKey": "00050001.2019-06-02T11:37:12.062-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 5
+    },
+    "energy": 289.0,
+    "farm": 149.0,
+    "factory": 194.0
+  },
+  {
+    "sectorKey": "00060001.2019-06-02T11:37:12.063-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 6
+    },
+    "energy": 297.0,
+    "farm": 139.0,
+    "factory": 192.0
+  },
+  {
+    "sectorKey": "00070001.2019-06-02T11:37:12.064-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 7
+    },
+    "energy": 314.0,
+    "farm": 138.0,
+    "factory": 208.0
+  },
+  {
+    "sectorKey": "00080001.2019-06-02T11:37:12.064-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 8
+    },
+    "energy": 294.0,
+    "farm": 139.0,
+    "factory": 186.0
+  },
+  {
+    "sectorKey": "00090001.2019-06-02T11:37:12.065-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 9
+    },
+    "energy": 316.0,
+    "farm": 131.0,
+    "factory": 214.0
+  },
+  {
+    "sectorKey": "00100001.2019-06-02T11:37:12.066-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 10
+    },
+    "energy": 300.0,
+    "farm": 144.0,
+    "factory": 212.0
+  },
+  {
+    "sectorKey": "00110001.2019-06-02T11:37:12.066-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 11
+    },
+    "energy": 333.0,
+    "farm": 131.0,
+    "factory": 167.0
+  },
+  {
+    "sectorKey": "00120001.2019-06-02T11:37:12.067-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 12
+    },
+    "energy": 298.0,
+    "farm": 135.0,
+    "factory": 179.0
+  },
+  {
+    "sectorKey": "00130001.2019-06-02T11:37:12.067-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 13
+    },
+    "energy": 284.0,
+    "farm": 159.0,
+    "factory": 176.0
+  },
+  {
+    "sectorKey": "00140001.2019-06-02T11:37:12.068-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 14
+    },
+    "energy": 314.0,
+    "farm": 129.0,
+    "factory": 197.0
+  },
+  {
+    "sectorKey": "00150001.2019-06-02T11:37:12.068-07:00",
+    "location": {
+      "xCoord": 1,
+      "yCoord": 15
+    },
+    "energy": 277.0,
+    "farm": 146.0,
+    "factory": 182.0
+  },
+  {
+    "sectorKey": "00000002.2019-06-02T11:37:12.069-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 0
+    },
+    "energy": 306.0,
+    "farm": 146.0,
+    "factory": 210.0
+  },
+  {
+    "sectorKey": "00010002.2019-06-02T11:37:12.069-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 1
+    },
+    "energy": 308.0,
+    "farm": 134.0,
+    "factory": 164.0
+  },
+  {
+    "sectorKey": "00020002.2019-06-02T11:37:12.07-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 2
+    },
+    "energy": 276.0,
+    "farm": 141.0,
+    "factory": 199.0
+  },
+  {
+    "sectorKey": "00030002.2019-06-02T11:37:12.07-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 3
+    },
+    "energy": 302.0,
+    "farm": 129.0,
+    "factory": 192.0
+  },
+  {
+    "sectorKey": "00040002.2019-06-02T11:37:12.07-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 4
+    },
+    "energy": 284.0,
+    "farm": 159.0,
+    "factory": 216.0
+  },
+  {
+    "sectorKey": "00050002.2019-06-02T11:37:12.071-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 5
+    },
+    "energy": 279.0,
+    "farm": 162.0,
+    "factory": 186.0
+  },
+  {
+    "sectorKey": "00060002.2019-06-02T11:37:12.071-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 6
+    },
+    "energy": 275.0,
+    "farm": 128.0,
+    "factory": 166.0
+  },
+  {
+    "sectorKey": "00070002.2019-06-02T11:37:12.072-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 7
+    },
+    "energy": 319.0,
+    "farm": 134.0,
+    "factory": 176.0
+  },
+  {
+    "sectorKey": "00080002.2019-06-02T11:37:12.073-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 8
+    },
+    "energy": 291.0,
+    "farm": 165.0,
+    "factory": 169.0
+  },
+  {
+    "sectorKey": "00090002.2019-06-02T11:37:12.073-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 9
+    },
+    "energy": 306.0,
+    "farm": 160.0,
+    "factory": 175.0
+  },
+  {
+    "sectorKey": "00100002.2019-06-02T11:37:12.074-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 10
+    },
+    "energy": 288.0,
+    "farm": 151.0,
+    "factory": 215.0
+  },
+  {
+    "sectorKey": "00110002.2019-06-02T11:37:12.074-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 11
+    },
+    "energy": 287.0,
+    "farm": 130.0,
+    "factory": 218.0
+  },
+  {
+    "sectorKey": "00120002.2019-06-02T11:37:12.075-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 12
+    },
+    "energy": 323.0,
+    "farm": 129.0,
+    "factory": 200.0
+  },
+  {
+    "sectorKey": "00130002.2019-06-02T11:37:12.075-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 13
+    },
+    "energy": 277.0,
+    "farm": 166.0,
+    "factory": 169.0
+  },
+  {
+    "sectorKey": "00140002.2019-06-02T11:37:12.075-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 14
+    },
+    "energy": 285.0,
+    "farm": 142.0,
+    "factory": 162.0
+  },
+  {
+    "sectorKey": "00150002.2019-06-02T11:37:12.077-07:00",
+    "location": {
+      "xCoord": 2,
+      "yCoord": 15
+    },
+    "energy": 300.0,
+    "farm": 165.0,
+    "factory": 161.0
+  },
+  {
+    "sectorKey": "00000003.2019-06-02T11:37:12.077-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 0
+    },
+    "energy": 299.0,
+    "farm": 140.0,
+    "factory": 193.0
+  },
+  {
+    "sectorKey": "00010003.2019-06-02T11:37:12.077-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 1
+    },
+    "energy": 309.0,
+    "farm": 139.0,
+    "factory": 186.0
+  },
+  {
+    "sectorKey": "00020003.2019-06-02T11:37:12.078-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 2
+    },
+    "energy": 329.0,
+    "farm": 152.0,
+    "factory": 206.0
+  },
+  {
+    "sectorKey": "00030003.2019-06-02T11:37:12.079-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 3
+    },
+    "energy": 282.0,
+    "farm": 129.0,
+    "factory": 167.0
+  },
+  {
+    "sectorKey": "00040003.2019-06-02T11:37:12.079-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 4
+    },
+    "energy": 287.0,
+    "farm": 167.0,
+    "factory": 164.0
+  },
+  {
+    "sectorKey": "00050003.2019-06-02T11:37:12.08-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 5
+    },
+    "energy": 333.0,
+    "farm": 163.0,
+    "factory": 195.0
+  },
+  {
+    "sectorKey": "00060003.2019-06-02T11:37:12.08-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 6
+    },
+    "energy": 314.0,
+    "farm": 130.0,
+    "factory": 202.0
+  },
+  {
+    "sectorKey": "00070003.2019-06-02T11:37:12.081-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 7
+    },
+    "energy": 280.0,
+    "farm": 162.0,
+    "factory": 175.0
+  },
+  {
+    "sectorKey": "00080003.2019-06-02T11:37:12.081-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 8
+    },
+    "energy": 311.0,
+    "farm": 158.0,
+    "factory": 196.0
+  },
+  {
+    "sectorKey": "00090003.2019-06-02T11:37:12.082-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 9
+    },
+    "energy": 331.0,
+    "farm": 147.0,
+    "factory": 217.0
+  },
+  {
+    "sectorKey": "00100003.2019-06-02T11:37:12.082-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 10
+    },
+    "energy": 331.0,
+    "farm": 125.0,
+    "factory": 186.0
+  },
+  {
+    "sectorKey": "00110003.2019-06-02T11:37:12.083-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 11
+    },
+    "energy": 334.0,
+    "farm": 142.0,
+    "factory": 204.0
+  },
+  {
+    "sectorKey": "00120003.2019-06-02T11:37:12.083-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 12
+    },
+    "energy": 275.0,
+    "farm": 159.0,
+    "factory": 193.0
+  },
+  {
+    "sectorKey": "00130003.2019-06-02T11:37:12.083-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 13
+    },
+    "energy": 278.0,
+    "farm": 127.0,
+    "factory": 180.0
+  },
+  {
+    "sectorKey": "00140003.2019-06-02T11:37:12.084-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 14
+    },
+    "energy": 329.0,
+    "farm": 135.0,
+    "factory": 173.0
+  },
+  {
+    "sectorKey": "00150003.2019-06-02T11:37:12.084-07:00",
+    "location": {
+      "xCoord": 3,
+      "yCoord": 15
+    },
+    "energy": 326.0,
+    "farm": 146.0,
+    "factory": 192.0
+  },
+  {
+    "sectorKey": "00000004.2019-06-02T11:37:12.085-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 0
+    },
+    "energy": 307.0,
+    "farm": 130.0,
+    "factory": 164.0
+  },
+  {
+    "sectorKey": "00010004.2019-06-02T11:37:12.085-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 1
+    },
+    "energy": 334.0,
+    "farm": 142.0,
+    "factory": 194.0
+  },
+  {
+    "sectorKey": "00020004.2019-06-02T11:37:12.085-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 2
+    },
+    "energy": 330.0,
+    "farm": 145.0,
+    "factory": 164.0
+  },
+  {
+    "sectorKey": "00030004.2019-06-02T11:37:12.086-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 3
+    },
+    "energy": 280.0,
+    "farm": 127.0,
+    "factory": 182.0
+  },
+  {
+    "sectorKey": "00040004.2019-06-02T11:37:12.086-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 4
+    },
+    "energy": 310.0,
+    "farm": 167.0,
+    "factory": 181.0
+  },
+  {
+    "sectorKey": "00050004.2019-06-02T11:37:12.086-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 5
+    },
+    "energy": 327.0,
+    "farm": 146.0,
+    "factory": 177.0
+  },
+  {
+    "sectorKey": "00060004.2019-06-02T11:37:12.087-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 6
+    },
+    "energy": 321.0,
+    "farm": 151.0,
+    "factory": 173.0
+  },
+  {
+    "sectorKey": "00070004.2019-06-02T11:37:12.087-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 7
+    },
+    "energy": 319.0,
+    "farm": 136.0,
+    "factory": 200.0
+  },
+  {
+    "sectorKey": "00080004.2019-06-02T11:37:12.088-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 8
+    },
+    "energy": 312.0,
+    "farm": 164.0,
+    "factory": 216.0
+  },
+  {
+    "sectorKey": "00090004.2019-06-02T11:37:12.088-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 9
+    },
+    "energy": 329.0,
+    "farm": 156.0,
+    "factory": 164.0
+  },
+  {
+    "sectorKey": "00100004.2019-06-02T11:37:12.089-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 10
+    },
+    "energy": 283.0,
+    "farm": 145.0,
+    "factory": 161.0
+  },
+  {
+    "sectorKey": "00110004.2019-06-02T11:37:12.089-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 11
+    },
+    "energy": 323.0,
+    "farm": 151.0,
+    "factory": 200.0
+  },
+  {
+    "sectorKey": "00120004.2019-06-02T11:37:12.09-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 12
+    },
+    "energy": 315.0,
+    "farm": 166.0,
+    "factory": 206.0
+  },
+  {
+    "sectorKey": "00130004.2019-06-02T11:37:12.09-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 13
+    },
+    "energy": 287.0,
+    "farm": 152.0,
+    "factory": 178.0
+  },
+  {
+    "sectorKey": "00140004.2019-06-02T11:37:12.09-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 14
+    },
+    "energy": 315.0,
+    "farm": 154.0,
+    "factory": 171.0
+  },
+  {
+    "sectorKey": "00150004.2019-06-02T11:37:12.091-07:00",
+    "location": {
+      "xCoord": 4,
+      "yCoord": 15
+    },
+    "energy": 279.0,
+    "farm": 153.0,
+    "factory": 188.0
+  },
+  {
+    "sectorKey": "00000005.2019-06-02T11:37:12.091-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 0
+    },
+    "energy": 287.0,
+    "farm": 139.0,
+    "factory": 201.0
+  },
+  {
+    "sectorKey": "00010005.2019-06-02T11:37:12.092-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 1
+    },
+    "energy": 288.0,
+    "farm": 169.0,
+    "factory": 181.0
+  },
+  {
+    "sectorKey": "00020005.2019-06-02T11:37:12.092-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 2
+    },
+    "energy": 288.0,
+    "farm": 139.0,
+    "factory": 175.0
+  },
+  {
+    "sectorKey": "00030005.2019-06-02T11:37:12.092-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 3
+    },
+    "energy": 291.0,
+    "farm": 161.0,
+    "factory": 161.0
+  },
+  {
+    "sectorKey": "00040005.2019-06-02T11:37:12.093-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 4
+    },
+    "energy": 278.0,
+    "farm": 138.0,
+    "factory": 187.0
+  },
+  {
+    "sectorKey": "00050005.2019-06-02T11:37:12.093-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 5
+    },
+    "energy": 306.0,
+    "farm": 166.0,
+    "factory": 170.0
+  },
+  {
+    "sectorKey": "00060005.2019-06-02T11:37:12.094-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 6
+    },
+    "energy": 300.0,
+    "farm": 132.0,
+    "factory": 180.0
+  },
+  {
+    "sectorKey": "00070005.2019-06-02T11:37:12.094-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 7
+    },
+    "energy": 299.0,
+    "farm": 138.0,
+    "factory": 188.0
+  },
+  {
+    "sectorKey": "00080005.2019-06-02T11:37:12.094-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 8
+    },
+    "energy": 305.0,
+    "farm": 149.0,
+    "factory": 214.0
+  },
+  {
+    "sectorKey": "00090005.2019-06-02T11:37:12.095-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 9
+    },
+    "energy": 297.0,
+    "farm": 168.0,
+    "factory": 211.0
+  },
+  {
+    "sectorKey": "00100005.2019-06-02T11:37:12.095-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 10
+    },
+    "energy": 317.0,
+    "farm": 159.0,
+    "factory": 207.0
+  },
+  {
+    "sectorKey": "00110005.2019-06-02T11:37:12.095-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 11
+    },
+    "energy": 329.0,
+    "farm": 166.0,
+    "factory": 184.0
+  },
+  {
+    "sectorKey": "00120005.2019-06-02T11:37:12.096-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 12
+    },
+    "energy": 303.0,
+    "farm": 132.0,
+    "factory": 166.0
+  },
+  {
+    "sectorKey": "00130005.2019-06-02T11:37:12.096-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 13
+    },
+    "energy": 316.0,
+    "farm": 165.0,
+    "factory": 211.0
+  },
+  {
+    "sectorKey": "00140005.2019-06-02T11:37:12.096-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 14
+    },
+    "energy": 326.0,
+    "farm": 152.0,
+    "factory": 214.0
+  },
+  {
+    "sectorKey": "00150005.2019-06-02T11:37:12.097-07:00",
+    "location": {
+      "xCoord": 5,
+      "yCoord": 15
+    },
+    "energy": 282.0,
+    "farm": 131.0,
+    "factory": 217.0
+  },
+  {
+    "sectorKey": "00000006.2019-06-02T11:37:12.097-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 0
+    },
+    "energy": 316.0,
+    "farm": 153.0,
+    "factory": 209.0
+  },
+  {
+    "sectorKey": "00010006.2019-06-02T11:37:12.097-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 1
+    },
+    "energy": 313.0,
+    "farm": 160.0,
+    "factory": 179.0
+  },
+  {
+    "sectorKey": "00020006.2019-06-02T11:37:12.098-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 2
+    },
+    "energy": 306.0,
+    "farm": 131.0,
+    "factory": 194.0
+  },
+  {
+    "sectorKey": "00030006.2019-06-02T11:37:12.098-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 3
+    },
+    "energy": 285.0,
+    "farm": 154.0,
+    "factory": 199.0
+  },
+  {
+    "sectorKey": "00040006.2019-06-02T11:37:12.099-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 4
+    },
+    "energy": 295.0,
+    "farm": 157.0,
+    "factory": 167.0
+  },
+  {
+    "sectorKey": "00050006.2019-06-02T11:37:12.099-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 5
+    },
+    "energy": 285.0,
+    "farm": 157.0,
+    "factory": 200.0
+  },
+  {
+    "sectorKey": "00060006.2019-06-02T11:37:12.1-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 6
+    },
+    "energy": 311.0,
+    "farm": 136.0,
+    "factory": 180.0
+  },
+  {
+    "sectorKey": "00070006.2019-06-02T11:37:12.1-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 7
+    },
+    "energy": 281.0,
+    "farm": 151.0,
+    "factory": 183.0
+  },
+  {
+    "sectorKey": "00080006.2019-06-02T11:37:12.1-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 8
+    },
+    "energy": 314.0,
+    "farm": 142.0,
+    "factory": 213.0
+  },
+  {
+    "sectorKey": "00090006.2019-06-02T11:37:12.101-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 9
+    },
+    "energy": 298.0,
+    "farm": 153.0,
+    "factory": 209.0
+  },
+  {
+    "sectorKey": "00100006.2019-06-02T11:37:12.101-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 10
+    },
+    "energy": 288.0,
+    "farm": 138.0,
+    "factory": 209.0
+  },
+  {
+    "sectorKey": "00110006.2019-06-02T11:37:12.101-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 11
+    },
+    "energy": 277.0,
+    "farm": 169.0,
+    "factory": 205.0
+  },
+  {
+    "sectorKey": "00120006.2019-06-02T11:37:12.102-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 12
+    },
+    "energy": 284.0,
+    "farm": 149.0,
+    "factory": 206.0
+  },
+  {
+    "sectorKey": "00130006.2019-06-02T11:37:12.102-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 13
+    },
+    "energy": 330.0,
+    "farm": 160.0,
+    "factory": 168.0
+  },
+  {
+    "sectorKey": "00140006.2019-06-02T11:37:12.102-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 14
+    },
+    "energy": 313.0,
+    "farm": 140.0,
+    "factory": 216.0
+  },
+  {
+    "sectorKey": "00150006.2019-06-02T11:37:12.102-07:00",
+    "location": {
+      "xCoord": 6,
+      "yCoord": 15
+    },
+    "energy": 287.0,
+    "farm": 153.0,
+    "factory": 172.0
+  },
+  {
+    "sectorKey": "00000007.2019-06-02T11:37:12.103-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 0
+    },
+    "energy": 320.0,
+    "farm": 132.0,
+    "factory": 212.0
+  },
+  {
+    "sectorKey": "00010007.2019-06-02T11:37:12.103-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 1
+    },
+    "energy": 297.0,
+    "farm": 147.0,
+    "factory": 199.0
+  },
+  {
+    "sectorKey": "00020007.2019-06-02T11:37:12.103-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 2
+    },
+    "energy": 292.0,
+    "farm": 143.0,
+    "factory": 165.0
+  },
+  {
+    "sectorKey": "00030007.2019-06-02T11:37:12.104-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 3
+    },
+    "energy": 283.0,
+    "farm": 135.0,
+    "factory": 202.0
+  },
+  {
+    "sectorKey": "00040007.2019-06-02T11:37:12.104-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 4
+    },
+    "energy": 302.0,
+    "farm": 134.0,
+    "factory": 168.0
+  },
+  {
+    "sectorKey": "00050007.2019-06-02T11:37:12.104-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 5
+    },
+    "energy": 320.0,
+    "farm": 155.0,
+    "factory": 188.0
+  },
+  {
+    "sectorKey": "00060007.2019-06-02T11:37:12.105-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 6
+    },
+    "energy": 302.0,
+    "farm": 139.0,
+    "factory": 192.0
+  },
+  {
+    "sectorKey": "00070007.2019-06-02T11:37:12.105-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 7
+    },
+    "energy": 286.0,
+    "farm": 134.0,
+    "factory": 175.0
+  },
+  {
+    "sectorKey": "00080007.2019-06-02T11:37:12.105-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 8
+    },
+    "energy": 287.0,
+    "farm": 152.0,
+    "factory": 167.0
+  },
+  {
+    "sectorKey": "00090007.2019-06-02T11:37:12.106-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 9
+    },
+    "energy": 303.0,
+    "farm": 130.0,
+    "factory": 197.0
+  },
+  {
+    "sectorKey": "00100007.2019-06-02T11:37:12.108-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 10
+    },
+    "energy": 333.0,
+    "farm": 142.0,
+    "factory": 172.0
+  },
+  {
+    "sectorKey": "00110007.2019-06-02T11:37:12.108-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 11
+    },
+    "energy": 291.0,
+    "farm": 161.0,
+    "factory": 161.0
+  },
+  {
+    "sectorKey": "00120007.2019-06-02T11:37:12.108-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 12
+    },
+    "energy": 328.0,
+    "farm": 130.0,
+    "factory": 206.0
+  },
+  {
+    "sectorKey": "00130007.2019-06-02T11:37:12.109-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 13
+    },
+    "energy": 322.0,
+    "farm": 162.0,
+    "factory": 170.0
+  },
+  {
+    "sectorKey": "00140007.2019-06-02T11:37:12.109-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 14
+    },
+    "energy": 332.0,
+    "farm": 148.0,
+    "factory": 195.0
+  },
+  {
+    "sectorKey": "00150007.2019-06-02T11:37:12.109-07:00",
+    "location": {
+      "xCoord": 7,
+      "yCoord": 15
+    },
+    "energy": 318.0,
+    "farm": 133.0,
+    "factory": 197.0
+  },
+  {
+    "sectorKey": "00000008.2019-06-02T11:37:12.11-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 0
+    },
+    "energy": 283.0,
+    "farm": 141.0,
+    "factory": 199.0
+  },
+  {
+    "sectorKey": "00010008.2019-06-02T11:37:12.11-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 1
+    },
+    "energy": 285.0,
+    "farm": 150.0,
+    "factory": 200.0
+  },
+  {
+    "sectorKey": "00020008.2019-06-02T11:37:12.11-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 2
+    },
+    "energy": 302.0,
+    "farm": 159.0,
+    "factory": 173.0
+  },
+  {
+    "sectorKey": "00030008.2019-06-02T11:37:12.111-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 3
+    },
+    "energy": 327.0,
+    "farm": 154.0,
+    "factory": 160.0
+  },
+  {
+    "sectorKey": "00040008.2019-06-02T11:37:12.111-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 4
+    },
+    "energy": 324.0,
+    "farm": 160.0,
+    "factory": 216.0
+  },
+  {
+    "sectorKey": "00050008.2019-06-02T11:37:12.111-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 5
+    },
+    "energy": 287.0,
+    "farm": 143.0,
+    "factory": 161.0
+  },
+  {
+    "sectorKey": "00060008.2019-06-02T11:37:12.111-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 6
+    },
+    "energy": 314.0,
+    "farm": 156.0,
+    "factory": 206.0
+  },
+  {
+    "sectorKey": "00070008.2019-06-02T11:37:12.112-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 7
+    },
+    "energy": 289.0,
+    "farm": 127.0,
+    "factory": 193.0
+  },
+  {
+    "sectorKey": "00080008.2019-06-02T11:37:12.112-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 8
+    },
+    "energy": 296.0,
+    "farm": 159.0,
+    "factory": 189.0
+  },
+  {
+    "sectorKey": "00090008.2019-06-02T11:37:12.112-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 9
+    },
+    "energy": 321.0,
+    "farm": 158.0,
+    "factory": 219.0
+  },
+  {
+    "sectorKey": "00100008.2019-06-02T11:37:12.113-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 10
+    },
+    "energy": 288.0,
+    "farm": 125.0,
+    "factory": 214.0
+  },
+  {
+    "sectorKey": "00110008.2019-06-02T11:37:12.113-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 11
+    },
+    "energy": 321.0,
+    "farm": 160.0,
+    "factory": 184.0
+  },
+  {
+    "sectorKey": "00120008.2019-06-02T11:37:12.113-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 12
+    },
+    "energy": 284.0,
+    "farm": 161.0,
+    "factory": 203.0
+  },
+  {
+    "sectorKey": "00130008.2019-06-02T11:37:12.113-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 13
+    },
+    "energy": 314.0,
+    "farm": 167.0,
+    "factory": 184.0
+  },
+  {
+    "sectorKey": "00140008.2019-06-02T11:37:12.114-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 14
+    },
+    "energy": 297.0,
+    "farm": 160.0,
+    "factory": 200.0
+  },
+  {
+    "sectorKey": "00150008.2019-06-02T11:37:12.114-07:00",
+    "location": {
+      "xCoord": 8,
+      "yCoord": 15
+    },
+    "energy": 333.0,
+    "farm": 153.0,
+    "factory": 199.0
+  },
+  {
+    "sectorKey": "00000009.2019-06-02T11:37:12.114-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 0
+    },
+    "energy": 303.0,
+    "farm": 144.0,
+    "factory": 177.0
+  },
+  {
+    "sectorKey": "00010009.2019-06-02T11:37:12.115-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 1
+    },
+    "energy": 326.0,
+    "farm": 168.0,
+    "factory": 166.0
+  },
+  {
+    "sectorKey": "00020009.2019-06-02T11:37:12.115-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 2
+    },
+    "energy": 278.0,
+    "farm": 163.0,
+    "factory": 163.0
+  },
+  {
+    "sectorKey": "00030009.2019-06-02T11:37:12.115-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 3
+    },
+    "energy": 285.0,
+    "farm": 133.0,
+    "factory": 217.0
+  },
+  {
+    "sectorKey": "00040009.2019-06-02T11:37:12.115-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 4
+    },
+    "energy": 323.0,
+    "farm": 142.0,
+    "factory": 189.0
+  },
+  {
+    "sectorKey": "00050009.2019-06-02T11:37:12.116-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 5
+    },
+    "energy": 330.0,
+    "farm": 160.0,
+    "factory": 217.0
+  },
+  {
+    "sectorKey": "00060009.2019-06-02T11:37:12.116-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 6
+    },
+    "energy": 321.0,
+    "farm": 154.0,
+    "factory": 192.0
+  },
+  {
+    "sectorKey": "00070009.2019-06-02T11:37:12.116-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 7
+    },
+    "energy": 299.0,
+    "farm": 166.0,
+    "factory": 200.0
+  },
+  {
+    "sectorKey": "00080009.2019-06-02T11:37:12.116-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 8
+    },
+    "energy": 325.0,
+    "farm": 139.0,
+    "factory": 174.0
+  },
+  {
+    "sectorKey": "00090009.2019-06-02T11:37:12.117-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 9
+    },
+    "energy": 317.0,
+    "farm": 140.0,
+    "factory": 180.0
+  },
+  {
+    "sectorKey": "00100009.2019-06-02T11:37:12.117-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 10
+    },
+    "energy": 275.0,
+    "farm": 159.0,
+    "factory": 178.0
+  },
+  {
+    "sectorKey": "00110009.2019-06-02T11:37:12.117-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 11
+    },
+    "energy": 316.0,
+    "farm": 163.0,
+    "factory": 219.0
+  },
+  {
+    "sectorKey": "00120009.2019-06-02T11:37:12.117-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 12
+    },
+    "energy": 315.0,
+    "farm": 131.0,
+    "factory": 192.0
+  },
+  {
+    "sectorKey": "00130009.2019-06-02T11:37:12.118-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 13
+    },
+    "energy": 304.0,
+    "farm": 149.0,
+    "factory": 204.0
+  },
+  {
+    "sectorKey": "00140009.2019-06-02T11:37:12.118-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 14
+    },
+    "energy": 309.0,
+    "farm": 169.0,
+    "factory": 209.0
+  },
+  {
+    "sectorKey": "00150009.2019-06-02T11:37:12.118-07:00",
+    "location": {
+      "xCoord": 9,
+      "yCoord": 15
+    },
+    "energy": 330.0,
+    "farm": 164.0,
+    "factory": 181.0
+  },
+  {
+    "sectorKey": "00000010.2019-06-02T11:37:12.118-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 0
+    },
+    "energy": 293.0,
+    "farm": 134.0,
+    "factory": 206.0
+  },
+  {
+    "sectorKey": "00010010.2019-06-02T11:37:12.119-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 1
+    },
+    "energy": 322.0,
+    "farm": 149.0,
+    "factory": 215.0
+  },
+  {
+    "sectorKey": "00020010.2019-06-02T11:37:12.119-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 2
+    },
+    "energy": 287.0,
+    "farm": 126.0,
+    "factory": 206.0
+  },
+  {
+    "sectorKey": "00030010.2019-06-02T11:37:12.119-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 3
+    },
+    "energy": 329.0,
+    "farm": 159.0,
+    "factory": 169.0
+  },
+  {
+    "sectorKey": "00040010.2019-06-02T11:37:12.119-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 4
+    },
+    "energy": 279.0,
+    "farm": 142.0,
+    "factory": 205.0
+  },
+  {
+    "sectorKey": "00050010.2019-06-02T11:37:12.12-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 5
+    },
+    "energy": 302.0,
+    "farm": 162.0,
+    "factory": 200.0
+  },
+  {
+    "sectorKey": "00060010.2019-06-02T11:37:12.12-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 6
+    },
+    "energy": 323.0,
+    "farm": 164.0,
+    "factory": 175.0
+  },
+  {
+    "sectorKey": "00070010.2019-06-02T11:37:12.12-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 7
+    },
+    "energy": 309.0,
+    "farm": 136.0,
+    "factory": 187.0
+  },
+  {
+    "sectorKey": "00080010.2019-06-02T11:37:12.12-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 8
+    },
+    "energy": 286.0,
+    "farm": 126.0,
+    "factory": 184.0
+  },
+  {
+    "sectorKey": "00090010.2019-06-02T11:37:12.121-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 9
+    },
+    "energy": 288.0,
+    "farm": 136.0,
+    "factory": 191.0
+  },
+  {
+    "sectorKey": "00100010.2019-06-02T11:37:12.121-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 10
+    },
+    "energy": 294.0,
+    "farm": 167.0,
+    "factory": 199.0
+  },
+  {
+    "sectorKey": "00110010.2019-06-02T11:37:12.122-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 11
+    },
+    "energy": 327.0,
+    "farm": 150.0,
+    "factory": 210.0
+  },
+  {
+    "sectorKey": "00120010.2019-06-02T11:37:12.122-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 12
+    },
+    "energy": 281.0,
+    "farm": 145.0,
+    "factory": 201.0
+  },
+  {
+    "sectorKey": "00130010.2019-06-02T11:37:12.122-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 13
+    },
+    "energy": 320.0,
+    "farm": 131.0,
+    "factory": 198.0
+  },
+  {
+    "sectorKey": "00140010.2019-06-02T11:37:12.123-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 14
+    },
+    "energy": 330.0,
+    "farm": 163.0,
+    "factory": 195.0
+  },
+  {
+    "sectorKey": "00150010.2019-06-02T11:37:12.123-07:00",
+    "location": {
+      "xCoord": 10,
+      "yCoord": 15
+    },
+    "energy": 320.0,
+    "farm": 134.0,
+    "factory": 201.0
+  },
+  {
+    "sectorKey": "00000011.2019-06-02T11:37:12.123-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 0
+    },
+    "energy": 302.0,
+    "farm": 152.0,
+    "factory": 160.0
+  },
+  {
+    "sectorKey": "00010011.2019-06-02T11:37:12.123-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 1
+    },
+    "energy": 277.0,
+    "farm": 145.0,
+    "factory": 215.0
+  },
+  {
+    "sectorKey": "00020011.2019-06-02T11:37:12.124-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 2
+    },
+    "energy": 285.0,
+    "farm": 167.0,
+    "factory": 218.0
+  },
+  {
+    "sectorKey": "00030011.2019-06-02T11:37:12.124-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 3
+    },
+    "energy": 299.0,
+    "farm": 139.0,
+    "factory": 212.0
+  },
+  {
+    "sectorKey": "00040011.2019-06-02T11:37:12.124-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 4
+    },
+    "energy": 294.0,
+    "farm": 139.0,
+    "factory": 186.0
+  },
+  {
+    "sectorKey": "00050011.2019-06-02T11:37:12.124-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 5
+    },
+    "energy": 309.0,
+    "farm": 157.0,
+    "factory": 206.0
+  },
+  {
+    "sectorKey": "00060011.2019-06-02T11:37:12.125-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 6
+    },
+    "energy": 303.0,
+    "farm": 129.0,
+    "factory": 167.0
+  },
+  {
+    "sectorKey": "00070011.2019-06-02T11:37:12.125-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 7
+    },
+    "energy": 333.0,
+    "farm": 144.0,
+    "factory": 177.0
+  },
+  {
+    "sectorKey": "00080011.2019-06-02T11:37:12.125-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 8
+    },
+    "energy": 291.0,
+    "farm": 134.0,
+    "factory": 170.0
+  },
+  {
+    "sectorKey": "00090011.2019-06-02T11:37:12.125-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 9
+    },
+    "energy": 311.0,
+    "farm": 131.0,
+    "factory": 174.0
+  },
+  {
+    "sectorKey": "00100011.2019-06-02T11:37:12.125-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 10
+    },
+    "energy": 320.0,
+    "farm": 161.0,
+    "factory": 214.0
+  },
+  {
+    "sectorKey": "00110011.2019-06-02T11:37:12.126-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 11
+    },
+    "energy": 333.0,
+    "farm": 138.0,
+    "factory": 198.0
+  },
+  {
+    "sectorKey": "00120011.2019-06-02T11:37:12.126-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 12
+    },
+    "energy": 319.0,
+    "farm": 168.0,
+    "factory": 171.0
+  },
+  {
+    "sectorKey": "00130011.2019-06-02T11:37:12.126-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 13
+    },
+    "energy": 307.0,
+    "farm": 150.0,
+    "factory": 202.0
+  },
+  {
+    "sectorKey": "00140011.2019-06-02T11:37:12.126-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 14
+    },
+    "energy": 305.0,
+    "farm": 148.0,
+    "factory": 214.0
+  },
+  {
+    "sectorKey": "00150011.2019-06-02T11:37:12.126-07:00",
+    "location": {
+      "xCoord": 11,
+      "yCoord": 15
+    },
+    "energy": 296.0,
+    "farm": 146.0,
+    "factory": 185.0
+  },
+  {
+    "sectorKey": "00000012.2019-06-02T11:37:12.127-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 0
+    },
+    "energy": 305.0,
+    "farm": 154.0,
+    "factory": 188.0
+  },
+  {
+    "sectorKey": "00010012.2019-06-02T11:37:12.127-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 1
+    },
+    "energy": 307.0,
+    "farm": 140.0,
+    "factory": 206.0
+  },
+  {
+    "sectorKey": "00020012.2019-06-02T11:37:12.127-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 2
+    },
+    "energy": 312.0,
+    "farm": 133.0,
+    "factory": 170.0
+  },
+  {
+    "sectorKey": "00030012.2019-06-02T11:37:12.127-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 3
+    },
+    "energy": 330.0,
+    "farm": 168.0,
+    "factory": 203.0
+  },
+  {
+    "sectorKey": "00040012.2019-06-02T11:37:12.128-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 4
+    },
+    "energy": 328.0,
+    "farm": 130.0,
+    "factory": 176.0
+  },
+  {
+    "sectorKey": "00050012.2019-06-02T11:37:12.128-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 5
+    },
+    "energy": 283.0,
+    "farm": 132.0,
+    "factory": 204.0
+  },
+  {
+    "sectorKey": "00060012.2019-06-02T11:37:12.128-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 6
+    },
+    "energy": 278.0,
+    "farm": 142.0,
+    "factory": 162.0
+  },
+  {
+    "sectorKey": "00070012.2019-06-02T11:37:12.128-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 7
+    },
+    "energy": 318.0,
+    "farm": 125.0,
+    "factory": 195.0
+  },
+  {
+    "sectorKey": "00080012.2019-06-02T11:37:12.129-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 8
+    },
+    "energy": 305.0,
+    "farm": 142.0,
+    "factory": 209.0
+  },
+  {
+    "sectorKey": "00090012.2019-06-02T11:37:12.129-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 9
+    },
+    "energy": 332.0,
+    "farm": 140.0,
+    "factory": 191.0
+  },
+  {
+    "sectorKey": "00100012.2019-06-02T11:37:12.129-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 10
+    },
+    "energy": 302.0,
+    "farm": 135.0,
+    "factory": 205.0
+  },
+  {
+    "sectorKey": "00110012.2019-06-02T11:37:12.129-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 11
+    },
+    "energy": 277.0,
+    "farm": 143.0,
+    "factory": 187.0
+  },
+  {
+    "sectorKey": "00120012.2019-06-02T11:37:12.129-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 12
+    },
+    "energy": 323.0,
+    "farm": 133.0,
+    "factory": 169.0
+  },
+  {
+    "sectorKey": "00130012.2019-06-02T11:37:12.13-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 13
+    },
+    "energy": 290.0,
+    "farm": 143.0,
+    "factory": 181.0
+  },
+  {
+    "sectorKey": "00140012.2019-06-02T11:37:12.13-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 14
+    },
+    "energy": 295.0,
+    "farm": 138.0,
+    "factory": 187.0
+  },
+  {
+    "sectorKey": "00150012.2019-06-02T11:37:12.13-07:00",
+    "location": {
+      "xCoord": 12,
+      "yCoord": 15
+    },
+    "energy": 315.0,
+    "farm": 127.0,
+    "factory": 215.0
+  },
+  {
+    "sectorKey": "00000013.2019-06-02T11:37:12.131-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 0
+    },
+    "energy": 315.0,
+    "farm": 162.0,
+    "factory": 176.0
+  },
+  {
+    "sectorKey": "00010013.2019-06-02T11:37:12.131-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 1
+    },
+    "energy": 326.0,
+    "farm": 150.0,
+    "factory": 212.0
+  },
+  {
+    "sectorKey": "00020013.2019-06-02T11:37:12.131-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 2
+    },
+    "energy": 280.0,
+    "farm": 166.0,
+    "factory": 216.0
+  },
+  {
+    "sectorKey": "00030013.2019-06-02T11:37:12.131-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 3
+    },
+    "energy": 312.0,
+    "farm": 167.0,
+    "factory": 179.0
+  },
+  {
+    "sectorKey": "00040013.2019-06-02T11:37:12.131-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 4
+    },
+    "energy": 317.0,
+    "farm": 155.0,
+    "factory": 197.0
+  },
+  {
+    "sectorKey": "00050013.2019-06-02T11:37:12.132-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 5
+    },
+    "energy": 319.0,
+    "farm": 162.0,
+    "factory": 183.0
+  },
+  {
+    "sectorKey": "00060013.2019-06-02T11:37:12.132-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 6
+    },
+    "energy": 315.0,
+    "farm": 139.0,
+    "factory": 174.0
+  },
+  {
+    "sectorKey": "00070013.2019-06-02T11:37:12.133-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 7
+    },
+    "energy": 314.0,
+    "farm": 138.0,
+    "factory": 209.0
+  },
+  {
+    "sectorKey": "00080013.2019-06-02T11:37:12.133-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 8
+    },
+    "energy": 294.0,
+    "farm": 134.0,
+    "factory": 205.0
+  },
+  {
+    "sectorKey": "00090013.2019-06-02T11:37:12.133-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 9
+    },
+    "energy": 279.0,
+    "farm": 158.0,
+    "factory": 218.0
+  },
+  {
+    "sectorKey": "00100013.2019-06-02T11:37:12.134-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 10
+    },
+    "energy": 318.0,
+    "farm": 140.0,
+    "factory": 218.0
+  },
+  {
+    "sectorKey": "00110013.2019-06-02T11:37:12.134-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 11
+    },
+    "energy": 319.0,
+    "farm": 155.0,
+    "factory": 160.0
+  },
+  {
+    "sectorKey": "00120013.2019-06-02T11:37:12.134-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 12
+    },
+    "energy": 276.0,
+    "farm": 140.0,
+    "factory": 173.0
+  },
+  {
+    "sectorKey": "00130013.2019-06-02T11:37:12.134-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 13
+    },
+    "energy": 320.0,
+    "farm": 137.0,
+    "factory": 214.0
+  },
+  {
+    "sectorKey": "00140013.2019-06-02T11:37:12.135-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 14
+    },
+    "energy": 331.0,
+    "farm": 142.0,
+    "factory": 180.0
+  },
+  {
+    "sectorKey": "00150013.2019-06-02T11:37:12.135-07:00",
+    "location": {
+      "xCoord": 13,
+      "yCoord": 15
+    },
+    "energy": 280.0,
+    "farm": 129.0,
+    "factory": 185.0
+  },
+  {
+    "sectorKey": "00000014.2019-06-02T11:37:12.135-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 0
+    },
+    "energy": 323.0,
+    "farm": 136.0,
+    "factory": 217.0
+  },
+  {
+    "sectorKey": "00010014.2019-06-02T11:37:12.135-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 1
+    },
+    "energy": 275.0,
+    "farm": 165.0,
+    "factory": 207.0
+  },
+  {
+    "sectorKey": "00020014.2019-06-02T11:37:12.136-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 2
+    },
+    "energy": 312.0,
+    "farm": 138.0,
+    "factory": 187.0
+  },
+  {
+    "sectorKey": "00030014.2019-06-02T11:37:12.136-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 3
+    },
+    "energy": 303.0,
+    "farm": 139.0,
+    "factory": 174.0
+  },
+  {
+    "sectorKey": "00040014.2019-06-02T11:37:12.136-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 4
+    },
+    "energy": 282.0,
+    "farm": 164.0,
+    "factory": 196.0
+  },
+  {
+    "sectorKey": "00050014.2019-06-02T11:37:12.136-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 5
+    },
+    "energy": 332.0,
+    "farm": 138.0,
+    "factory": 190.0
+  },
+  {
+    "sectorKey": "00060014.2019-06-02T11:37:12.136-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 6
+    },
+    "energy": 287.0,
+    "farm": 167.0,
+    "factory": 160.0
+  },
+  {
+    "sectorKey": "00070014.2019-06-02T11:37:12.137-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 7
+    },
+    "energy": 281.0,
+    "farm": 167.0,
+    "factory": 211.0
+  },
+  {
+    "sectorKey": "00080014.2019-06-02T11:37:12.137-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 8
+    },
+    "energy": 296.0,
+    "farm": 159.0,
+    "factory": 161.0
+  },
+  {
+    "sectorKey": "00090014.2019-06-02T11:37:12.137-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 9
+    },
+    "energy": 283.0,
+    "farm": 143.0,
+    "factory": 164.0
+  },
+  {
+    "sectorKey": "00100014.2019-06-02T11:37:12.137-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 10
+    },
+    "energy": 322.0,
+    "farm": 149.0,
+    "factory": 210.0
+  },
+  {
+    "sectorKey": "00110014.2019-06-02T11:37:12.137-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 11
+    },
+    "energy": 333.0,
+    "farm": 142.0,
+    "factory": 168.0
+  },
+  {
+    "sectorKey": "00120014.2019-06-02T11:37:12.138-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 12
+    },
+    "energy": 309.0,
+    "farm": 125.0,
+    "factory": 183.0
+  },
+  {
+    "sectorKey": "00130014.2019-06-02T11:37:12.138-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 13
+    },
+    "energy": 330.0,
+    "farm": 137.0,
+    "factory": 203.0
+  },
+  {
+    "sectorKey": "00140014.2019-06-02T11:37:12.138-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 14
+    },
+    "energy": 283.0,
+    "farm": 159.0,
+    "factory": 200.0
+  },
+  {
+    "sectorKey": "00150014.2019-06-02T11:37:12.139-07:00",
+    "location": {
+      "xCoord": 14,
+      "yCoord": 15
+    },
+    "energy": 298.0,
+    "farm": 136.0,
+    "factory": 174.0
+  },
+  {
+    "sectorKey": "00000015.2019-06-02T11:37:12.139-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 0
+    },
+    "energy": 313.0,
+    "farm": 168.0,
+    "factory": 205.0
+  },
+  {
+    "sectorKey": "00010015.2019-06-02T11:37:12.139-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 1
+    },
+    "energy": 333.0,
+    "farm": 151.0,
+    "factory": 182.0
+  },
+  {
+    "sectorKey": "00020015.2019-06-02T11:37:12.14-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 2
+    },
+    "energy": 303.0,
+    "farm": 126.0,
+    "factory": 203.0
+  },
+  {
+    "sectorKey": "00030015.2019-06-02T11:37:12.14-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 3
+    },
+    "energy": 325.0,
+    "farm": 150.0,
+    "factory": 198.0
+  },
+  {
+    "sectorKey": "00040015.2019-06-02T11:37:12.14-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 4
+    },
+    "energy": 279.0,
+    "farm": 166.0,
+    "factory": 195.0
+  },
+  {
+    "sectorKey": "00050015.2019-06-02T11:37:12.14-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 5
+    },
+    "energy": 294.0,
+    "farm": 162.0,
+    "factory": 187.0
+  },
+  {
+    "sectorKey": "00060015.2019-06-02T11:37:12.14-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 6
+    },
+    "energy": 323.0,
+    "farm": 158.0,
+    "factory": 214.0
+  },
+  {
+    "sectorKey": "00070015.2019-06-02T11:37:12.141-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 7
+    },
+    "energy": 282.0,
+    "farm": 165.0,
+    "factory": 216.0
+  },
+  {
+    "sectorKey": "00080015.2019-06-02T11:37:12.141-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 8
+    },
+    "energy": 334.0,
+    "farm": 164.0,
+    "factory": 215.0
+  },
+  {
+    "sectorKey": "00090015.2019-06-02T11:37:12.141-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 9
+    },
+    "energy": 325.0,
+    "farm": 162.0,
+    "factory": 168.0
+  },
+  {
+    "sectorKey": "00100015.2019-06-02T11:37:12.141-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 10
+    },
+    "energy": 289.0,
+    "farm": 149.0,
+    "factory": 160.0
+  },
+  {
+    "sectorKey": "00110015.2019-06-02T11:37:12.141-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 11
+    },
+    "energy": 281.0,
+    "farm": 125.0,
+    "factory": 207.0
+  },
+  {
+    "sectorKey": "00120015.2019-06-02T11:37:12.142-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 12
+    },
+    "energy": 293.0,
+    "farm": 165.0,
+    "factory": 213.0
+  },
+  {
+    "sectorKey": "00130015.2019-06-02T11:37:12.142-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 13
+    },
+    "energy": 317.0,
+    "farm": 130.0,
+    "factory": 218.0
+  },
+  {
+    "sectorKey": "00140015.2019-06-02T11:37:12.142-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 14
+    },
+    "energy": 298.0,
+    "farm": 128.0,
+    "factory": 191.0
+  },
+  {
+    "sectorKey": "00150015.2019-06-02T11:37:12.143-07:00",
+    "location": {
+      "xCoord": 15,
+      "yCoord": 15
+    },
+    "energy": 279.0,
+    "farm": 159.0,
+    "factory": 186.0
+  }
+]

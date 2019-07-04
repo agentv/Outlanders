@@ -1,0 +1,42 @@
+[
+	{
+	  "sectorKey": "00000000.2019-05-27T09:03:23.909-07:00",
+	  "location": {
+	    "xCoord": 0,
+	    "yCoord": 0
+	  },
+	  "energy": 286.0,
+	  "farm": 130.0,
+	  "factory": 204.0
+	},
+	{
+	  "sectorKey": "00000001.2019-05-27T09:03:23.92-07:00",
+	  "location": {
+	    "xCoord": 0,
+	    "yCoord": 1
+	  },
+	  "energy": 279.0,
+	  "farm": 162.0,
+	  "factory": 207.0
+	},
+	{
+	  "sectorKey": "00000002.2019-05-27T09:03:23.921-07:00",
+	  "location": {
+	    "xCoord": 1,
+	    "yCoord": 0
+	  },
+	  "energy": 333.0,
+	  "farm": 157.0,
+	  "factory": 191.0
+	},
+	{
+	  "sectorKey": "00000003.2019-05-27T09:03:23.922-07:00",
+	  "location": {
+	    "xCoord": 1,
+	    "yCoord": 1
+	  },
+	  "energy": 315.0,
+	  "farm": 157.0,
+	  "factory": 169.0
+	}
+]

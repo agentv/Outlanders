@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="http://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+<script src="/opentip/lib/opentip.js"></script>
+<script src="/opentip/lib/adapter-native.js"></script>
+<link href="/opentip/css/opentip.css" rel="stylesheet" type="text/css" />
+
+<meta charset="UTF-8">
+<title>One Fine Plot</title>
+
+<!--
+This demo should plot a 16x16 segment of space from the 
+Outlanders game board.
+-->
+
+</head>
+<body>
+
+<h1>One Very Fine Plot...</h1>
+<div id="thisPlot"></div>
+<script type="text/javascript">
+		// we need D3 and tooltip.js loaded
+
+var scaling = 2
+		
+var cells = 16;
+var width = 24 * scaling;
+var height = 24 * scaling;
+var marginX = 8;
+var marginY = 8;
+var bigmapwidth = (marginX * 2) + (cells * width);
+var bigmapheight = (marginY * 2) + (cells * height);
+
+
+var viewport = d3.select("#thisPlot")
+	.append("svg")
+	.attr("height", bigmapheight)
+	.attr("width", bigmapwidth);
+	
+// attempt to define backghround as a pattern (failed so far) - it appears in the def list, didn't use it in the squares tho'
+viewport.append("defs")
+	.append("pattern")
+	.attr("id", "starfield")
+	.append("image")
+		.attr("xlink:href", "art/starfield.jpg");
+
+/* // adds image to the background
+viewport.append("image")
+	.attr("xlink:href", "art/starfield.jpg")
+	.attr("height", bigmapheight)
+	.attr("width", bigmapwidth)
+	.attr("x", 0)
+	.attr("y", 0)
+ */
+ 
+// simple basic static rectangle
+viewport.append("rect")
+	.attr("x", marginX)
+	.attr("y", marginY)
+	.attr("width", width)
+	.attr("height", height);
+	
+// same, but with attrs() instead
+viewport.append("rect")
+	.attrs({x: marginX+width, y: marginY, width: width, height: height, fill: "red"});
+	
+// a couple of rectangle and rotation experiments
+viewport.append('rect')
+	.attrs({x: 10 * width + marginX, y: width + marginY, width: width*2, height: height, fill: 'blue' })
+viewport.append('rect')
+	.attrs({x: 12 * width + marginX, y: 3 * width + marginY, width: width*2, height: height, fill: 'red'})
+
+
+	
+// big circle - now, we're just hijacking the canvas
+var bigsize = 4 * width
+var bigradius = bigsize / 2
+var centerx = marginX + (6 * width) + bigradius
+var roundabout = viewport.append("circle")
+	.attrs({
+		cx: marginX + (6 * width),
+		cy: marginY + (2 * height),
+		r: bigradius,
+		fill: "blue"
+	})
+
+
+/* 
+ * unhappy pie
+ *
+ 
+ // now, let's get a pie
+var piedata = {f: 30, e: 40, m: 30}
+var colorscheme = {f: "darkred", e: "khaki", m: "steelblue"} // not currently used
+var colorswatch = d3.scaleOrdinal()
+	.domain(piedata)
+	.range(["darkred", "khaki", "steelblue"])
+var pie = d3.pie()
+  .value(function(d) {return d.value; })
+var baked_pie = pie(d3.entries(piedata))
+
+
+var pieCenterX = marginX + (10 * width)
+var pieCenterY = marginY + (2 * height)
+viewport.selectAll(".sector")
+	.append("g")
+		.attr("transform", "translate(" + pieCenterX + "," + pieCenterY + ")")
+		.attr("class", "sector")
+	.data(baked_pie)
+	.enter()
+	.append("path")
+		.attr("d", d3.arc()
+			.innerRadius(0)
+			.outerRadius(bigradius)
+		)
+		.attr("fill", function(d) {return(colorswatch(d.data.key))} )
+		//.attr('fill', function(d){ return(colorswatch(d.data.key)) })
+		.attr("stroke", "black")
+
+ */
+
+ 
+ // now, we loop and get a 8x8
+for (var c = 4; c <= 11; ++c ){
+	for (var r = 4; r <= 11; ++r) {
+		var colorwheel = ["DarkSlateGrey", "deeppink","mediumblue","orangered", "RebeccaPurple",  "brown", ]
+		var offsetX = marginX + (width * c)
+		var offsetY = marginY + (height * r)
+		var color = (colorwheel[(c+r*3) % 6]) // cycle through colors
+		viewport.append("rect")
+			.attrs ({x: offsetX, y: offsetY, 
+				width: width, height: height, 
+				stroke: "blue"})
+			.attr("fill", color)
+			.attr("class", "quberts")
+	}
+}
+
+// Smaller grid at bottom
+for (var x = 12; x <= 15; ++x){
+	for (var y = 12; y <= 15; ++y){
+		var colorwheel = ["yellow", "gold", "deeppink", "orange"]
+		var offsetX = marginX + (width * x)
+		var offsetY = marginY + (height * y)
+		var color = (colorwheel[(c*r) % 4]) // cycle through colors
+		viewport.append("rect")
+			.attrs ({x: offsetX, y: offsetY, 
+				width: width, height: height, 
+				fill: "orange", stroke: "blue"})
+		
+	}
+}
+
+/* data items look like this:
+[
+	 {
+	   "sectorKey": "00000000.2019-05-27T09:03:23.909-07:00",
+	   "location": {
+	     "xCoord": 0,
+	     "yCoord": 0
+	   },
+	   "energy": 286.0,
+	   "farm": 130.0,
+	   "factory": 204.0
+	 }
+ ]
+ */
+
+
+</script>
+
+</body>
+</html>

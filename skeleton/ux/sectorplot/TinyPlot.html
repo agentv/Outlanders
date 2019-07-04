@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<!-- updated 190704 -->
+<head>
+<meta charset="UTF-8">
+<title>Tiny Plot (Outlanders)</title>
+<script type="text/javascript" src="http://d3js.org/d3.v4.min.js"></script>
+<script type="text/javascript">
+
+// essential configuration
+
+var scaling   = 3
+var cellswide = 16
+var cellsdeep = 16
+
+var cellsize = scaling * 24
+var margin   = scaling * 2
+
+var overallwidth = (margin * 2) + (cellsize * cellswide)
+var overallheight = (margin * 2) + (cellsize * cellsdeep)
+
+var smallpatch = [
+	{
+	  "sectorKey": "00000000.2019-05-27T09:03:23.909-07:00",
+	  "location": {
+	    "xCoord": 4,
+	    "yCoord": 4
+	  },
+	  "energy": 286.0,
+	  "farm": 130.0,
+	  "factory": 204.0
+	},
+	{
+	  "sectorKey": "00000001.2019-05-27T09:03:23.92-07:00",
+	  "location": {
+	    "xCoord": 0,
+	    "yCoord": 1
+	  },
+	  "energy": 279.0,
+	  "farm": 162.0,
+	  "factory": 207.0
+	},
+	{
+	  "sectorKey": "00000002.2019-05-27T09:03:23.921-07:00",
+	  "location": {
+	    "xCoord": 6,
+	    "yCoord": 3
+	  },
+	  "energy": 333.0,
+	  "farm": 157.0,
+	  "factory": 191.0
+	},
+	{
+	  "sectorKey": "00000003.2019-05-27T09:03:23.922-07:00",
+	  "location": {
+	    "xCoord": 1,
+	    "yCoord": 1
+	  },
+	  "energy": 315.0,
+	  "farm": 157.0,
+	  "factory": 169.0
+	},
+	{
+	  "sectorKey": "00000005.2019-05-27T09:03:23.922-07:00",
+	  "location": {
+	    "xCoord": 2,
+	    "yCoord": 0
+	  },
+	  "energy": 325.0,
+	  "farm": 143.0,
+	  "factory": 177.0
+	},
+	{
+	  "sectorKey": "00000006.2019-05-27T09:03:23.922-07:00",
+	  "location": {
+	    "xCoord": 3,
+	    "yCoord": 0
+	  },
+	  "energy": 305.0,
+	  "farm": 133.0,
+	  "factory": 147.0
+	},
+	{
+	  "sectorKey": "00000004.2019-05-27T09:03:23.922-07:00",
+	  "location": {
+	    "xCoord": 12,
+	    "yCoord": 9
+	  },
+	  "energy": 315.0,
+	  "farm": 157.0,
+	  "factory": 169.0
+	}
+	
+]
+
+</script>
+
+</head>
+<body>
+<h1>A tiny sector plot...</h1>
+
+<div id="tinyplot"></div>
+
+<script type="text/javascript">
+
+var canvas = d3.select("#tinyplot")
+	.append("svg")
+	.attr("height", overallheight)
+	.attr("width", overallwidth)
+	.append("g")
+		.attr("class", "canvas")
+		.attr("transform", function(d,i) 
+				{ return "translate(" + margin + "," + margin + ")"; });
+
+var cellpictures = canvas.selectAll(".cells")
+	.data(smallpatch).enter()
+	.append("g")
+	.attr("class", "cells")
+	.attr("transform", function(d) {
+		return "translate(" + d.location.xCoord * cellsize +
+				"," + d.location.yCoord * cellsize + ")";
+	})
+	
+cellpictures.append("rect")
+	.attr("width", cellsize)
+	.attr("height", cellsize)
+	.attr("fill", "black")
+	.attr("stroke-width", 0)
+	.attr("x", function(d) { return ( d.location.xCoord); })
+	.attr("y", function(d) { return ( d.location.yCoord); })
+
+// this function could be generalized to handle all three sector attributes: fn(attribute,offset,color)	
+// maybe...
+offset = 2
+tcolor = "lightskyblue"
+cellpictures.append('text') 
+	.text(function(d) { return d.energy; })
+		.attr("x", function(d) {return (1 * scaling + d.location.xCoord);})
+		.attr("y", function(d) {return (cellsize - (offset*scaling) + d.location.yCoord);})
+		.attr("stroke", tcolor)
+		.attr("font-size", 12)
+
+offset = 6
+tcolor = "goldenrod"
+cellpictures.append('text') 
+	.text(function(d) { return d.farm; }) // yes, I know. 1 * scaling is silly, but I might change my mind later, y'know?
+		.attr("x", function(d) {return (1 * scaling + d.location.xCoord);})
+		.attr("y", function(d) {return (cellsize - (offset*scaling) + d.location.yCoord);})
+		.attr("stroke", tcolor)
+		.attr("font-size", 12)
+
+offset = 10
+tcolor = "lavender"
+cellpictures.append('text') 
+	.text(function(d) { return d.factory; })
+		.attr("x", function(d) {return (1 * scaling + d.location.xCoord);})
+		.attr("y", function(d) {return (cellsize - (offset * scaling) + d.location.yCoord);})
+		.attr("stroke", tcolor)
+		.attr("font-size", 12)
+		
+// draw vertical line at x=8
+cellpictures.append('line')
+	.attr("x1", function(d) {return d.location.xCoord + (8 * scaling);})
+	.attr("y1", function(d) {return d.location.yCoord;})
+	.attr("x2", function(d) {return d.location.xCoord + (8 * scaling);})
+	.attr("y2", function(d) {return d.location.yCoord + cellsize;})
+	.attr("stroke", "orange")
+
+/* 
+	
+// TODO - 
+	add patches to depict the relative resource levels
+	add mouseover behavior on cells that highlight the numbers
+	add onmouseclick behavior to update a full status window alongside canvas
+	refactor this script to deliver working map surface to client
+
+ */
+</script>
+
+</body>
+</html>

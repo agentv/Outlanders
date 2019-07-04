@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<!-- updated 190704 -->
+<head>
+<meta charset="UTF-8">
+<title>Sector Plot (Outlanders)</title>
+<script type="text/javascript" src="http://d3js.org/d3.v4.min.js"></script>
+<script type="text/javascript">
+
+// essential configuration
+
+var scaling   = 2
+var cellswide = 12
+var cellsdeep = 12
+
+var cellsize = scaling * 24
+var margin   = scaling * 3
+
+var overallwidth  = (margin * 2) + (cellsize * cellswide)
+var overallheight = (margin * 2) + (cellsize * cellsdeep)
+
+</script>
+
+</head>
+<body>
+<h1>A sample sector plot...</h1>
+
+<div id="tinyplot"></div>
+
+<script type="text/javascript">
+
+function loadPlot (d) {
+	var canvas = d3.select("#tinyplot")
+	.append("svg")
+	.attr("height", overallheight)
+	.attr("width", overallwidth)
+	.append("g")
+		.attr("class", "canvas")
+ 		.attr("transform", function(d,i) 
+				{ return "translate(" + (margin-1) + "," + margin + ")"; });
+ 
+	var cellpictures = canvas.selectAll(".cells")
+		.data(d).enter()
+		.append("g")
+		.attr("class", "cells")
+		.attr("transform", function(d) {
+			return "translate(" + d.location.xCoord * cellsize +
+					"," + d.location.yCoord * cellsize + ")";
+		})
+		
+ 	cellpictures.append("rect")
+			.attr("width", cellsize)
+			.attr("height", cellsize)
+			.attr("fill", "black")
+			.attr("x", function(d) { return ( d.location.xCoord); })
+			.attr("y", function(d) { return ( d.location.yCoord); })
+ 			
+	// creates the colony badge
+	cellpictures.append('rect')
+		.attr('width', 6 * scaling)
+		.attr('height', 6 * scaling)
+		.attr('fill', function(d){ return 'Chocolate' } )
+		.attr('x', function(d) {return (2 * scaling + d.location.xCoord);})
+		.attr('y', function(d) {return (3 + d.location.yCoord);})
+
+	// creates the shipyard badge
+	cellpictures.append('rect')
+		.attr('width', 6 * scaling)
+		.attr('height', 6 * scaling)
+		.attr('fill', 'SlateGrey')
+		.attr('x', function(d) {return (16 * scaling + d.location.xCoord);})
+		.attr('y', function(d) {return (3 + d.location.yCoord);})
+ }
+ 
+/*
+ * This is the data source .. the only thing that may need to change.
+ */
+ 
+d3.json("data/sector0f.json", loadPlot)
+
+</script>
+
+</body>
+</html>
