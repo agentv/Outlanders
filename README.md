@@ -117,6 +117,8 @@ the game clock, the end-of-turn logic, and more.
 
 #### Project Status
 
+200424 - this project is nearing its end. assets from this project will be factored into the project for "XSettlers" (say it like accellerator) which will be a Mule project using API-led connectivity. Simplification, and a message-centric architecture make it seem possible to implement this game with a variety of user experience models. These could range from a 3D map rendered as an SVG object embedded in HTML5, a VR warroom, or simply a Twitter DM dialog. At this point, it's clear that we want to implement the game map as 3D space. (early efforts can be constrained to plane 0) The total number of objects is streamlined I think, and the same with the API architecture.
+
 190527 - (laughs!) It's still time to implement the note server. And the breakthrough this time was an engine (written as a Mule app in Anypoint Studio) that can generate and store patches of the map. New game object now. The "plot" -- it is a 16x16 fragment of the game map.
 
 190523 - It's time to implement the note server. It should be an object store that holds notes according to their key (a construct that consists of object type, timestamp, and a salt component that eliminates namespace collision. A function (NameMaker() in gu.py) is already present to create such keys. ---- after some thought, believe I have to do a spoon-over, and maybe model the objects in Java. Haven't settled on that outcome, but I'm feeling that, especially if I want to use a Mule Runtime for the server. Maybe low-level objects (Pods, Notes) can be modeled in Java, and the higher-order elements (Sector, Ship, Gameboard) could be modeled in JSON or YAML. Thinking about that now.
