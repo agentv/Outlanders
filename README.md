@@ -1,5 +1,5 @@
 # Outlanders
-Python Model for exploration and industry game
+Python Model for exploration and industry game - Now superceded by the XSettlers repo
 
 ## Usage
 When this is finished, it will be deployed as a web application implemented as Python core code (server) and delivered as NoteBook objects as implemented in the game. Maps, unit status, game communications, all can be encapsulated in a NoteBook.
